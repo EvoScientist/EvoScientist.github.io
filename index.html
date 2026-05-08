@@ -115,7 +115,7 @@
     .rv.vis { opacity:1; transform:translateY(0); }
     .rv-1{transition-delay:.08s} .rv-2{transition-delay:.16s} .rv-3{transition-delay:.24s}
     .rv-4{transition-delay:.32s} .rv-5{transition-delay:.40s} .rv-6{transition-delay:.48s}
-    .rv-7{transition-delay:.56s} .rv-8{transition-delay:.64s}
+    .rv-7{transition-delay:.56s} .rv-8{transition-delay:.64s} .rv-9{transition-delay:.72s}
     .divider { max-width:1200px; margin:0 auto; height:1px; background:linear-gradient(90deg,transparent,var(--cyan-10),transparent); }
     @keyframes gshift { 0%,100%{background-position:0% 50%} 50%{background-position:100% 50%} }
 
@@ -894,6 +894,27 @@
         <h3>MCP &amp; EvoSkills</h3>
         <p>Plug in MCP servers or install research-lifecycle skills from GitHub. Compatible with other AI coding agents out of the box.</p>
       </div>
+      <div class="feat rv rv-7">
+        <div class="feat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+        </div>
+        <h3>Async Sub-Agents</h3>
+        <p>Long-running tasks dispatched to background workers via <code style="font-family:var(--mono);font-size:0.78rem;color:var(--cyan);">start_async_task</code>. The main agent stays responsive and is notified on completion — true parallel multi-agent execution.</p>
+      </div>
+      <div class="feat rv rv-8">
+        <div class="feat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/><path d="M12 7v5l3 3"/></svg>
+        </div>
+        <h3>Adaptive Context</h3>
+        <p>Per-turn tool filtering keeps only relevant tools visible. Dynamic system-prompt rewriting trims to conversation state. Automatic context overflow recovery prevents runaway sessions.</p>
+      </div>
+      <div class="feat rv rv-9">
+        <div class="feat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"/><path d="M19 10v2a7 7 0 01-14 0v-2M12 19v4M8 23h8"/></svg>
+        </div>
+        <h3>Human Control</h3>
+        <p>Approve high-risk tool calls before they run. Voice input via <code style="font-family:var(--mono);font-size:0.78rem;color:var(--cyan);">faster-whisper</code> (zh/en/auto). 14 slash commands — <code style="font-family:var(--mono);font-size:0.78rem;color:var(--cyan);">/threads</code>, <code style="font-family:var(--mono);font-size:0.78rem;color:var(--cyan);">/resume</code>, <code style="font-family:var(--mono);font-size:0.78rem;color:var(--cyan);">/compact</code>, and more.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -1026,17 +1047,20 @@
         <div class="skills-content">
           <div class="s-label" style="margin-bottom:0.6rem;">Official Skill Repository</div>
           <h3>EvoSkills</h3>
-          <p>10 research-lifecycle skills covering the full pipeline from ideation to publication. Install all with a single command. Also compatible with Claude Code, Cursor, and other AI coding agents.</p>
+          <p>13 research-lifecycle skills covering the full pipeline from ideation to publication. Install all with a single command. Also compatible with Claude Code, Cursor, and other AI coding agents.</p>
           <div class="skills-tags">
             <span class="skill-tag">research-ideation</span>
-            <span class="skill-tag">idea-tournament</span>
+            <span class="skill-tag">research-survey</span>
+            <span class="skill-tag">paper-navigator</span>
             <span class="skill-tag">experiment-pipeline</span>
             <span class="skill-tag">experiment-craft</span>
+            <span class="skill-tag">experiment-iterative-coder</span>
             <span class="skill-tag">paper-planning</span>
             <span class="skill-tag">paper-writing</span>
             <span class="skill-tag">paper-review</span>
             <span class="skill-tag">paper-rebuttal</span>
             <span class="skill-tag">academic-slides</span>
+            <span class="skill-tag">nano-banana</span>
             <span class="skill-tag">evo-memory</span>
           </div>
           <div style="margin-top:1.5rem;">
@@ -1047,7 +1071,7 @@
           </div>
         </div>
         <div class="skills-count">
-          <div class="num">10</div>
+          <div class="num">13</div>
           <div class="lbl">Skills</div>
         </div>
       </div>
@@ -1063,7 +1087,7 @@
   <div class="cta-rings"><div class="cr"></div><div class="cr"></div><div class="cr"></div><div class="cr"></div></div>
   <div class="container">
     <h2 class="cta-title rv">Stay tuned.<br><span class="grad">Big things are coming.</span></h2>
-    <p class="cta-sub rv rv-1">Benchmarks &middot; Web Interface &middot; More agents &middot; EvoSkills v2</p>
+    <p class="cta-sub rv rv-1">Benchmarks &middot; More agents &middot; EvoSkills v2</p>
     <div class="cta-btns rv rv-2">
       <a href="mailto:EvoScientist.ai@gmail.com" class="cta-link">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg>
