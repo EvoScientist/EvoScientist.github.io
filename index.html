@@ -617,7 +617,7 @@
     <div class="badges rv rv-3">
       <span class="badge c">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-        v0.1.5
+        v0.1.6
       </span>
       <span class="badge g">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
@@ -721,6 +721,13 @@
     <div class="cl-timeline rv rv-2">
       <div class="cl-item latest">
         <div class="cl-head">
+          <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.1.6" target="_blank" rel="noopener">v0.1.6</a>
+          <span class="cl-date">11 Jun 2026</span>
+        </div>
+        <div class="cl-text">Session persistence fix: WebUI / <code>langgraph dev</code> threads survive restarts (SQLite checkpointer + scoped thread restore), memory-worker checkpoint cleanup (delete-on-completion + startup purge), short thread IDs in <code>/threads</code> and resume hints.</div>
+      </div>
+      <div class="cl-item">
+        <div class="cl-head">
           <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.1.5" target="_blank" rel="noopener">v0.1.5</a>
           <span class="cl-date">11 Jun 2026</span>
         </div>
@@ -747,14 +754,14 @@
         </div>
         <div class="cl-text">Browser WebUI mode (beta), <code>EvoSci deploy</code> standalone LangGraph server, default model → <code>claude-sonnet-4-6</code>, MiniMax M3, plus sandbox-timeout and async-notifier channel-routing fixes.</div>
       </div>
-      <div class="cl-item">
-        <div class="cl-head">
-          <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.1.1" target="_blank" rel="noopener">v0.1.1</a>
-          <span class="cl-date">19 May 2026</span>
-        </div>
-        <div class="cl-text">deepagents 0.6.2 DeltaChannel upgrade, tier-aware skill mounts, status &amp; elapsed-time bar, QQ inline buttons.</div>
-      </div>
       <div id="cl-rest">
+        <div class="cl-item">
+          <div class="cl-head">
+            <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.1.1" target="_blank" rel="noopener">v0.1.1</a>
+            <span class="cl-date">19 May 2026</span>
+          </div>
+          <div class="cl-text">deepagents 0.6.2 DeltaChannel upgrade, tier-aware skill mounts, status &amp; elapsed-time bar, QQ inline buttons.</div>
+        </div>
         <div class="cl-item">
           <div class="cl-head">
             <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.1.0" target="_blank" rel="noopener">v0.1.0</a>
@@ -827,8 +834,8 @@
         </div>
       </div>
     </div>
-    <button class="cl-toggle rv" id="cl-toggle" type="button" aria-expanded="false" onclick="var r=document.getElementById('cl-rest'),o=r.classList.toggle('open');this.classList.toggle('open',o);this.setAttribute('aria-expanded',o);this.querySelector('.cl-toggle-label').textContent=o?'Show fewer releases':'Show 10 earlier releases';">
-      <span class="cl-toggle-label">Show 10 earlier releases</span>
+    <button class="cl-toggle rv" id="cl-toggle" type="button" aria-expanded="false" onclick="var r=document.getElementById('cl-rest'),o=r.classList.toggle('open');this.classList.toggle('open',o);this.setAttribute('aria-expanded',o);this.querySelector('.cl-toggle-label').textContent=o?'Show fewer releases':'Show 11 earlier releases';">
+      <span class="cl-toggle-label">Show 11 earlier releases</span>
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
     </button>
   </div>
