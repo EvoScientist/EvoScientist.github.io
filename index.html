@@ -617,7 +617,7 @@
     <div class="badges rv rv-3">
       <span class="badge c">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-        v0.1.6
+        v0.1.7
       </span>
       <span class="badge g">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
@@ -721,6 +721,13 @@
     <div class="cl-timeline rv rv-2">
       <div class="cl-item latest">
         <div class="cl-head">
+          <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.1.7" target="_blank" rel="noopener">v0.1.7</a>
+          <span class="cl-date">16 Jun 2026</span>
+        </div>
+        <div class="cl-text">Memory retrieval: agents run a per-task preflight over stored observations (<code>search_observations</code> ranked keyword search + <code>read_memory</code>); multi-stage slash-command completions with subcommand awareness; Windows reliability fixes (async MCP tool execution + graph-state recovery after interruptions, <code>cmd.exe</code> path quoting); quoted virtual-path handling; deepagents 0.6.10.</div>
+      </div>
+      <div class="cl-item">
+        <div class="cl-head">
           <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.1.6" target="_blank" rel="noopener">v0.1.6</a>
           <span class="cl-date">11 Jun 2026</span>
         </div>
@@ -747,14 +754,14 @@
         </div>
         <div class="cl-text">Multimodal handling (image + PDF/doc flatten/hoisting, text-only model fallback), runtime-context middleware, memory middleware → profile files with stream timeline narration, textual CJK-input fix.</div>
       </div>
-      <div class="cl-item">
-        <div class="cl-head">
-          <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.1.2" target="_blank" rel="noopener">v0.1.2</a>
-          <span class="cl-date">02 Jun 2026</span>
-        </div>
-        <div class="cl-text">Browser WebUI mode (beta), <code>EvoSci deploy</code> standalone LangGraph server, default model → <code>claude-sonnet-4-6</code>, MiniMax M3, plus sandbox-timeout and async-notifier channel-routing fixes.</div>
-      </div>
       <div id="cl-rest">
+        <div class="cl-item">
+          <div class="cl-head">
+            <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.1.2" target="_blank" rel="noopener">v0.1.2</a>
+            <span class="cl-date">02 Jun 2026</span>
+          </div>
+          <div class="cl-text">Browser WebUI mode (beta), <code>EvoSci deploy</code> standalone LangGraph server, default model → <code>claude-sonnet-4-6</code>, MiniMax M3, plus sandbox-timeout and async-notifier channel-routing fixes.</div>
+        </div>
         <div class="cl-item">
           <div class="cl-head">
             <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.1.1" target="_blank" rel="noopener">v0.1.1</a>
@@ -834,8 +841,8 @@
         </div>
       </div>
     </div>
-    <button class="cl-toggle rv" id="cl-toggle" type="button" aria-expanded="false" onclick="var r=document.getElementById('cl-rest'),o=r.classList.toggle('open');this.classList.toggle('open',o);this.setAttribute('aria-expanded',o);this.querySelector('.cl-toggle-label').textContent=o?'Show fewer releases':'Show 11 earlier releases';">
-      <span class="cl-toggle-label">Show 11 earlier releases</span>
+    <button class="cl-toggle rv" id="cl-toggle" type="button" aria-expanded="false" onclick="var r=document.getElementById('cl-rest'),o=r.classList.toggle('open');this.classList.toggle('open',o);this.setAttribute('aria-expanded',o);this.querySelector('.cl-toggle-label').textContent=o?'Show fewer releases':'Show 12 earlier releases';">
+      <span class="cl-toggle-label">Show 12 earlier releases</span>
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
     </button>
   </div>
