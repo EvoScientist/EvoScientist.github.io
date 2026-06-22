@@ -617,7 +617,7 @@
     <div class="badges rv rv-3">
       <span class="badge c">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-        v0.1.7
+        v0.1.8
       </span>
       <span class="badge g">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
@@ -721,6 +721,13 @@
     <div class="cl-timeline rv rv-2">
       <div class="cl-item latest">
         <div class="cl-head">
+          <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.1.8" target="_blank" rel="noopener">v0.1.8</a>
+          <span class="cl-date">22 Jun 2026</span>
+        </div>
+        <div class="cl-text">LangGraph gateway layer: UI-agnostic graph &amp; thread access shared across CLI / TUI / serve / channel; OpenRouter Anthropic prompt caching now <strong>on by default</strong> (opt out with <code>openrouter_anthropic_prompt_cache=false</code>); slash-command Enter now submits correctly when a command name prefixes another; pre-commit ruff bump.</div>
+      </div>
+      <div class="cl-item">
+        <div class="cl-head">
           <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.1.7" target="_blank" rel="noopener">v0.1.7</a>
           <span class="cl-date">16 Jun 2026</span>
         </div>
@@ -747,14 +754,14 @@
         </div>
         <div class="cl-text">Auxiliary model for background tasks &amp; tool selection, observation-memory lifecycle, Qwen3.7-Max/Plus (DashScope), UI-backend selection, plus an OpenRouter multi-turn reasoning fix.</div>
       </div>
-      <div class="cl-item">
-        <div class="cl-head">
-          <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.1.3" target="_blank" rel="noopener">v0.1.3</a>
-          <span class="cl-date">03 Jun 2026</span>
-        </div>
-        <div class="cl-text">Multimodal handling (image + PDF/doc flatten/hoisting, text-only model fallback), runtime-context middleware, memory middleware → profile files with stream timeline narration, textual CJK-input fix.</div>
-      </div>
       <div id="cl-rest">
+        <div class="cl-item">
+          <div class="cl-head">
+            <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.1.3" target="_blank" rel="noopener">v0.1.3</a>
+            <span class="cl-date">03 Jun 2026</span>
+          </div>
+          <div class="cl-text">Multimodal handling (image + PDF/doc flatten/hoisting, text-only model fallback), runtime-context middleware, memory middleware → profile files with stream timeline narration, textual CJK-input fix.</div>
+        </div>
         <div class="cl-item">
           <div class="cl-head">
             <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.1.2" target="_blank" rel="noopener">v0.1.2</a>
@@ -841,8 +848,8 @@
         </div>
       </div>
     </div>
-    <button class="cl-toggle rv" id="cl-toggle" type="button" aria-expanded="false" onclick="var r=document.getElementById('cl-rest'),o=r.classList.toggle('open');this.classList.toggle('open',o);this.setAttribute('aria-expanded',o);this.querySelector('.cl-toggle-label').textContent=o?'Show fewer releases':'Show 12 earlier releases';">
-      <span class="cl-toggle-label">Show 12 earlier releases</span>
+    <button class="cl-toggle rv" id="cl-toggle" type="button" aria-expanded="false" onclick="var r=document.getElementById('cl-rest'),o=r.classList.toggle('open');this.classList.toggle('open',o);this.setAttribute('aria-expanded',o);this.querySelector('.cl-toggle-label').textContent=o?'Show fewer releases':'Show 13 earlier releases';">
+      <span class="cl-toggle-label">Show 13 earlier releases</span>
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
     </button>
   </div>
