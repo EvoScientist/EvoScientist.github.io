@@ -617,7 +617,7 @@
     <div class="badges rv rv-3">
       <span class="badge c">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-        v0.2.1
+        v0.2.2
       </span>
       <span class="badge g">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
@@ -721,6 +721,13 @@
     <div class="cl-timeline rv rv-2">
       <div class="cl-item latest">
         <div class="cl-head">
+          <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.2.2" target="_blank" rel="noopener">v0.2.2</a>
+          <span class="cl-date">11 Jul 2026</span>
+        </div>
+        <div class="cl-text"><strong>New models.</strong> Selectable in onboarding and <code>/model</code>: GPT-5.6 (sol, terra, luna) for OpenAI and OpenRouter, plus Grok 4.5 and Tencent Hunyuan HY3 on OpenRouter; tighter config-file permissions and a reworked onboarding OAuth flow for auxiliary models.</div>
+      </div>
+      <div class="cl-item">
+        <div class="cl-head">
           <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.2.1" target="_blank" rel="noopener">v0.2.1</a>
           <span class="cl-date">05 Jul 2026</span>
         </div>
@@ -747,14 +754,14 @@
         </div>
         <div class="cl-text">LangGraph gateway layer: UI-agnostic graph &amp; thread access shared across CLI / TUI / serve / channel; OpenRouter Anthropic prompt caching now <strong>on by default</strong> (opt out with <code>openrouter_anthropic_prompt_cache=false</code>); slash-command Enter now submits correctly when a command name prefixes another; pre-commit ruff bump.</div>
       </div>
-      <div class="cl-item">
-        <div class="cl-head">
-          <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.1.7" target="_blank" rel="noopener">v0.1.7</a>
-          <span class="cl-date">16 Jun 2026</span>
-        </div>
-        <div class="cl-text">Memory retrieval: agents run a per-task preflight over stored observations (<code>search_observations</code> ranked keyword search + <code>read_memory</code>); multi-stage slash-command completions with subcommand awareness; Windows reliability fixes (async MCP tool execution + graph-state recovery after interruptions, <code>cmd.exe</code> path quoting); quoted virtual-path handling; deepagents 0.6.10.</div>
-      </div>
       <div id="cl-rest">
+        <div class="cl-item">
+          <div class="cl-head">
+            <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.1.7" target="_blank" rel="noopener">v0.1.7</a>
+            <span class="cl-date">16 Jun 2026</span>
+          </div>
+          <div class="cl-text">Memory retrieval: agents run a per-task preflight over stored observations (<code>search_observations</code> ranked keyword search + <code>read_memory</code>); multi-stage slash-command completions with subcommand awareness; Windows reliability fixes (async MCP tool execution + graph-state recovery after interruptions, <code>cmd.exe</code> path quoting); quoted virtual-path handling; deepagents 0.6.10.</div>
+        </div>
         <div class="cl-item">
           <div class="cl-head">
             <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.1.6" target="_blank" rel="noopener">v0.1.6</a>
@@ -869,8 +876,8 @@
         </div>
       </div>
     </div>
-    <button class="cl-toggle rv" id="cl-toggle" type="button" aria-expanded="false" onclick="var r=document.getElementById('cl-rest'),o=r.classList.toggle('open');this.classList.toggle('open',o);this.setAttribute('aria-expanded',o);this.querySelector('.cl-toggle-label').textContent=o?'Show fewer releases':'Show 16 earlier releases';">
-      <span class="cl-toggle-label">Show 16 earlier releases</span>
+    <button class="cl-toggle rv" id="cl-toggle" type="button" aria-expanded="false" onclick="var r=document.getElementById('cl-rest'),o=r.classList.toggle('open');this.classList.toggle('open',o);this.setAttribute('aria-expanded',o);this.querySelector('.cl-toggle-label').textContent=o?'Show fewer releases':'Show 17 earlier releases';">
+      <span class="cl-toggle-label">Show 17 earlier releases</span>
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
     </button>
   </div>
