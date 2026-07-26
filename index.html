@@ -617,7 +617,7 @@
     <div class="badges rv rv-3">
       <span class="badge c">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-        v0.2.3
+        v0.2.4
       </span>
       <span class="badge g">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
@@ -721,6 +721,13 @@
     <div class="cl-timeline rv rv-2">
       <div class="cl-item latest">
         <div class="cl-head">
+          <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.2.4" target="_blank" rel="noopener">v0.2.4</a>
+          <span class="cl-date">26 Jul 2026</span>
+        </div>
+        <div class="cl-text"><strong>Opus 5 &amp; Gemini 3.6.</strong> Claude Opus 5 selectable on Anthropic and OpenRouter (incl. fast), plus Gemini 3.6 Flash and 3.5 Flash Lite on Google and OpenRouter; Kimi K3 now works over Anthropic-protocol channels (Kimi For Coding, custom endpoints), covering structured output, history replay, and multi-turn thinking; fixes for interrupted tool-call history, skill-install path leaks, and OpenRouter SSE streaming (pinned below 0.11).</div>
+      </div>
+      <div class="cl-item">
+        <div class="cl-head">
           <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.2.3" target="_blank" rel="noopener">v0.2.3</a>
           <span class="cl-date">18 Jul 2026</span>
         </div>
@@ -747,14 +754,14 @@
         </div>
         <div class="cl-text"><strong>Autonomy milestone.</strong> Scheduled tasks: cron-style recurring runs you set up with <code>/schedule</code> or natural language, running unattended with shell-access gating for safety; self-linking memory that connects related observations into a knowledge graph (complements / contradicts / supersedes) as it grows; a read-only <strong><code>GET /api/models</code></strong> endpoint exposing the model registry to the WebUI picker; the main agent now always keeps its memory tools available; deps: deepagents 0.6.12 / langchain-quickjs 0.3.2.</div>
       </div>
-      <div class="cl-item">
-        <div class="cl-head">
-          <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.1.9" target="_blank" rel="noopener">v0.1.9</a>
-          <span class="cl-date">23 Jun 2026</span>
-        </div>
-        <div class="cl-text">Hotfix for fresh installs: the first message crashed with <code>The subagent task tool cannot be exposed via ptc</code> after deepagents 0.6.11 / langchain-quickjs 0.3 reserved <code>task</code> as the REPL global. Removed <code>task</code> from the code-interpreter PTC allowlist (<code>task()</code> stays available as the REPL global; async dispatch stays in PTC) and pinned <code>deepagents[quickjs]~=0.6.11</code>.</div>
-      </div>
       <div id="cl-rest">
+        <div class="cl-item">
+          <div class="cl-head">
+            <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.1.9" target="_blank" rel="noopener">v0.1.9</a>
+            <span class="cl-date">23 Jun 2026</span>
+          </div>
+          <div class="cl-text">Hotfix for fresh installs: the first message crashed with <code>The subagent task tool cannot be exposed via ptc</code> after deepagents 0.6.11 / langchain-quickjs 0.3 reserved <code>task</code> as the REPL global. Removed <code>task</code> from the code-interpreter PTC allowlist (<code>task()</code> stays available as the REPL global; async dispatch stays in PTC) and pinned <code>deepagents[quickjs]~=0.6.11</code>.</div>
+        </div>
         <div class="cl-item">
           <div class="cl-head">
             <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.1.8" target="_blank" rel="noopener">v0.1.8</a>
@@ -883,8 +890,8 @@
         </div>
       </div>
     </div>
-    <button class="cl-toggle rv" id="cl-toggle" type="button" aria-expanded="false" onclick="var r=document.getElementById('cl-rest'),o=r.classList.toggle('open');this.classList.toggle('open',o);this.setAttribute('aria-expanded',o);this.querySelector('.cl-toggle-label').textContent=o?'Show fewer releases':'Show 18 earlier releases';">
-      <span class="cl-toggle-label">Show 18 earlier releases</span>
+    <button class="cl-toggle rv" id="cl-toggle" type="button" aria-expanded="false" onclick="var r=document.getElementById('cl-rest'),o=r.classList.toggle('open');this.classList.toggle('open',o);this.setAttribute('aria-expanded',o);this.querySelector('.cl-toggle-label').textContent=o?'Show fewer releases':'Show 19 earlier releases';">
+      <span class="cl-toggle-label">Show 19 earlier releases</span>
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
     </button>
   </div>
