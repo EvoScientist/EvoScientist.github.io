@@ -116,6 +116,7 @@
     .rv-1{transition-delay:.08s} .rv-2{transition-delay:.16s} .rv-3{transition-delay:.24s}
     .rv-4{transition-delay:.32s} .rv-5{transition-delay:.40s} .rv-6{transition-delay:.48s}
     .rv-7{transition-delay:.56s} .rv-8{transition-delay:.64s} .rv-9{transition-delay:.72s}
+    .rv-10{transition-delay:.80s} .rv-11{transition-delay:.88s} .rv-12{transition-delay:.96s}
     .divider { max-width:1200px; margin:0 auto; height:1px; background:linear-gradient(90deg,transparent,var(--cyan-10),transparent); }
     @keyframes gshift { 0%,100%{background-position:0% 50%} 50%{background-position:100% 50%} }
 
@@ -203,6 +204,10 @@
       background:var(--cyan); color:#050816; transition:0.3s cubic-bezier(0.16,1,0.3,1);
     }
     .btn-p:hover { background:#69fbff; box-shadow:0 0 40px rgba(0,229,255,0.25); transform:translateY(-1px); }
+    .gh-stars { display:inline-flex; align-items:center; gap:0.28rem; padding:0.06rem 0.45rem; border-radius:20px; font-family:var(--mono); font-size:0.72rem; font-weight:700; line-height:1.5; }
+    .gh-stars svg { width:11px; height:11px; color:#ffca3a; flex-shrink:0; }
+    .nav-btn .gh-stars { background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.10); color:var(--text-1); }
+    .btn-p .gh-stars { background:rgba(5,8,22,0.15); color:#050816; }
     .btn-p svg { width:16px; height:16px; fill:currentColor; }
     .btn-s {
       display:inline-flex; align-items:center; gap:0.5rem;
@@ -450,6 +455,30 @@
     .skills-count .num { font-size:4rem; font-weight:800; color:var(--cyan); letter-spacing:-0.05em; line-height:1; }
     .skills-count .lbl { font-size:0.82rem; color:var(--text-3); font-weight:400; margin-top:0.2rem; }
 
+    /* ── Demo ── */
+    #demo { padding:6rem 2rem; }
+    .surface-frame { position:relative; border-radius:14px; overflow:hidden; border:1px solid var(--glass-b); background:var(--glass); }
+    .surface-frame video { display:block; width:100%; height:auto; }
+    .surface-cap { position:absolute; top:0.85rem; left:0.85rem; z-index:2; display:inline-flex; align-items:center; font-family:var(--mono); font-size:0.72rem; letter-spacing:0.04em; text-transform:uppercase; color:var(--cyan); background:rgba(6,12,18,0.72); border:1px solid var(--cyan-20); border-radius:7px; padding:0.32rem 0.7rem; backdrop-filter:blur(6px); }
+    .surfaces-row { display:flex; flex-wrap:wrap; gap:1.25rem; margin-top:1.25rem; align-items:flex-start; justify-content:center; }
+    .surfaces-row .surface-frame video { height:400px; width:auto; max-width:100%; }
+    .surface-phone { display:flex; justify-content:center; }
+    .surface-graph { display:flex; justify-content:center; margin-top:1.25rem; }
+    .surface-graph .surface-frame { max-width:840px; width:100%; }
+    @media (max-width:1040px){ .surfaces-row .surface-frame video { height:auto; width:100%; } .surface-phone .surface-frame { max-width:320px; } }
+
+    /* ── Founder ── */
+    #founder { padding:6rem 2rem; }
+    .founder-card { display:grid; grid-template-columns:1fr auto; gap:3rem; align-items:center; margin-top:2.5rem; padding:2.5rem; background:var(--glass); border:1px solid var(--glass-b); border-radius:20px; }
+    .founder-name { font-size:1.9rem; font-weight:700; letter-spacing:-0.02em; }
+    .founder-role { font-family:var(--mono); font-size:0.8rem; color:var(--cyan); margin-top:0.35rem; margin-bottom:1.3rem; }
+    .founder-bio { color:var(--text-2); line-height:1.85; font-weight:300; max-width:640px; }
+    .founder-bio a { color:var(--cyan); text-decoration:none; border-bottom:1px solid var(--cyan-20); transition:0.2s; }
+    .founder-bio a:hover { border-bottom-color:var(--cyan); }
+    .founder-links { display:flex; gap:0.7rem; margin-top:1.7rem; flex-wrap:wrap; }
+    .founder-photo img { width:210px; height:210px; border-radius:50%; object-fit:cover; display:block; border:1px solid var(--cyan-20); box-shadow:0 0 45px var(--cyan-10); }
+    @media (max-width:768px){ .founder-card { grid-template-columns:1fr; } .founder-photo { order:-1; } .founder-photo img { width:150px; height:150px; } }
+
     /* ── Team ── */
     #team { padding:7rem 2rem; }
     .team-core { display:grid; grid-template-columns:repeat(3,1fr); gap:1.25rem; margin-top:3rem; }
@@ -577,6 +606,7 @@
     <li><a href="#changelog">Changelog</a></li>
     <li><a href="#awards">Awards</a></li>
     <li><a href="#onboard">Quick Start</a></li>
+    <li><a href="#demo">Demo</a></li>
     <li><a href="#arch">Agents</a></li>
     <li><a href="#providers">Providers</a></li>
     <li><a href="#channels">Channels</a></li>
@@ -586,6 +616,7 @@
     <a href="https://github.com/EvoScientist/EvoScientist" target="_blank" rel="noopener" class="nav-btn">
       <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
       GitHub
+      <span class="gh-stars" data-gh-stars><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.784 1.401 8.169L12 18.896l-7.335 3.867 1.401-8.169L.132 9.21l8.2-1.192z"/></svg><span class="gh-stars-n">4.4k</span></span>
     </a>
   </div>
 </nav>
@@ -632,6 +663,7 @@
       <a href="https://github.com/EvoScientist/EvoScientist" target="_blank" rel="noopener" class="btn-p">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
         GitHub
+        <span class="gh-stars" data-gh-stars><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.784 1.401 8.169L12 18.896l-7.335 3.867 1.401-8.169L.132 9.21l8.2-1.192z"/></svg><span class="gh-stars-n">4.4k</span></span>
       </a>
       <a href="https://arxiv.org/abs/2603.08127" target="_blank" rel="noopener" class="btn-gold">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
@@ -977,6 +1009,39 @@
 
 <div class="divider"></div>
 
+<!-- ── DEMO ── -->
+<section id="demo">
+  <div class="container">
+    <div class="s-label rv">See It In Action</div>
+    <h2 class="s-title rv rv-1">Demo</h2>
+    <p class="s-sub rv rv-2">The same EvoScientist agent — driven from a desktop WebUI, the terminal, or your phone — plus its self-evolving EvoMemory graph.</p>
+    <div class="surface-frame rv rv-3" style="margin-top:3.5rem;">
+      <span class="surface-cap">Desktop WebUI</span>
+      <video class="surface-vid" src="assets/webui.mp4" poster="assets/webui.jpg" loop muted playsinline preload="none"></video>
+    </div>
+    <div class="surfaces-row rv rv-4">
+      <div class="surface-frame">
+        <span class="surface-cap">CLI / TUI</span>
+        <video class="surface-vid" src="assets/cli-tui.mp4" poster="assets/cli-tui.jpg" loop muted playsinline preload="none"></video>
+      </div>
+      <div class="surface-phone">
+        <div class="surface-frame">
+          <span class="surface-cap">Mobile</span>
+          <video class="surface-vid" src="assets/mobile.mp4" poster="assets/mobile.jpg" loop muted playsinline preload="none"></video>
+        </div>
+      </div>
+    </div>
+    <div class="surface-graph rv rv-5">
+      <div class="surface-frame">
+        <span class="surface-cap">EvoMemory · Knowledge Graph</span>
+        <video class="surface-vid" src="assets/research_graph.mp4" poster="assets/research_graph.jpg" loop muted playsinline preload="none"></video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
 <!-- ── ARCHITECTURE ── -->
 <section id="arch">
   <div class="container">
@@ -1076,7 +1141,7 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 3h7v7H3zM14 3h7v7h-7zM14 14h7v7h-7zM3 14h7v7H3z"/></svg>
         </div>
         <h3>Persistent Memory</h3>
-        <p>Context, preferences, and experimental findings survive across sessions. The system internalizes scholarly taste and builds on prior work.</p>
+        <p>Context, preferences, and findings survive across sessions — self-linking into a knowledge graph (complements / contradicts / supersedes) so the system internalizes scholarly taste and builds on prior work.</p>
       </div>
       <div class="feat rv rv-3">
         <div class="feat-icon">
@@ -1125,7 +1190,28 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"/><path d="M19 10v2a7 7 0 01-14 0v-2M12 19v4M8 23h8"/></svg>
         </div>
         <h3>Human Control</h3>
-        <p>Approve high-risk tool calls before they run. Voice input via <code style="font-family:var(--mono);font-size:0.78rem;color:var(--cyan);">faster-whisper</code> (zh/en/auto). 14 slash commands — <code style="font-family:var(--mono);font-size:0.78rem;color:var(--cyan);">/threads</code>, <code style="font-family:var(--mono);font-size:0.78rem;color:var(--cyan);">/resume</code>, <code style="font-family:var(--mono);font-size:0.78rem;color:var(--cyan);">/compact</code>, and more.</p>
+        <p>Approve high-risk tool calls before they run. Voice input via <code style="font-family:var(--mono);font-size:0.78rem;color:var(--cyan);">faster-whisper</code> (zh/en/auto). Rich slash commands — <code style="font-family:var(--mono);font-size:0.78rem;color:var(--cyan);">/threads</code>, <code style="font-family:var(--mono);font-size:0.78rem;color:var(--cyan);">/resume</code>, <code style="font-family:var(--mono);font-size:0.78rem;color:var(--cyan);">/schedule</code>, and more.</p>
+      </div>
+      <div class="feat rv rv-10">
+        <div class="feat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="M9 16l2 2 4-4"/></svg>
+        </div>
+        <h3>Scheduled &amp; Autonomous</h3>
+        <p>Cron-style recurring runs via <code style="font-family:var(--mono);font-size:0.78rem;color:var(--cyan);">/schedule</code> or natural language, executing unattended with shell-access gating. AutoSkills lets EvoMemory draft reusable skills from its own observation clusters.</p>
+      </div>
+      <div class="feat rv rv-11">
+        <div class="feat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><path d="M6 6h.01M6 18h.01"/></svg>
+        </div>
+        <h3>Deploy &amp; Integrate</h3>
+        <p>Ship a standalone LangGraph server with <code style="font-family:var(--mono);font-size:0.78rem;color:var(--cyan);">EvoSci deploy</code> — full MCP and async sub-agents over HTTP for external UIs and SDK clients, optionally exposed through a public Cloudflare tunnel.</p>
+      </div>
+      <div class="feat rv rv-12">
+        <div class="feat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+        </div>
+        <h3>Multimodal Intake</h3>
+        <p>Drop in images, PDFs, and documents — flattened and hoisted for analysis, with automatic text-only fallback when a model lacks vision.</p>
       </div>
     </div>
   </div>
@@ -1259,7 +1345,7 @@
         <div class="skills-content">
           <div class="s-label" style="margin-bottom:0.6rem;">Official Skill Repository</div>
           <h3>EvoSkills</h3>
-          <p>13 research-lifecycle skills covering the full pipeline from ideation to publication. Install all with a single command. Also compatible with Claude Code, Cursor, and other AI coding agents.</p>
+          <p>16 research-lifecycle skills covering the full pipeline from ideation to publication. Install all with a single command. Also compatible with Claude Code, Cursor, and other AI coding agents.</p>
           <div class="skills-tags">
             <span class="skill-tag">research-ideation</span>
             <span class="skill-tag">research-survey</span>
@@ -1271,8 +1357,11 @@
             <span class="skill-tag">paper-writing</span>
             <span class="skill-tag">paper-review</span>
             <span class="skill-tag">paper-rebuttal</span>
+            <span class="skill-tag">paper-figures</span>
             <span class="skill-tag">academic-slides</span>
             <span class="skill-tag">nano-banana</span>
+            <span class="skill-tag">paper-graph</span>
+            <span class="skill-tag">evomath-tao</span>
             <span class="skill-tag">evo-memory</span>
           </div>
           <div style="margin-top:1.5rem;">
@@ -1283,7 +1372,7 @@
           </div>
         </div>
         <div class="skills-count">
-          <div class="num">13</div>
+          <div class="num">16</div>
           <div class="lbl">Skills</div>
         </div>
       </div>
@@ -1309,6 +1398,31 @@
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 00-4.885-1.515.074.074 0 00-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 00-5.487 0 12.64 12.64 0 00-.617-1.25.077.077 0 00-.079-.037A19.736 19.736 0 003.677 4.37a.07.07 0 00-.032.027C.533 9.046-.32 13.58.099 18.057c.002.022.015.043.033.055a19.895 19.895 0 005.993 3.03.078.078 0 00.084-.028 14.09 14.09 0 001.226-1.994.076.076 0 00-.041-.106 13.11 13.11 0 01-1.872-.892.077.077 0 01-.008-.128 10.2 10.2 0 00.372-.292.074.074 0 01.077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 01.078.01c.12.098.246.198.373.292a.077.077 0 01-.006.127 12.299 12.299 0 01-1.873.892.077.077 0 00-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 00.084.028 19.839 19.839 0 006.002-3.03.077.077 0 00.032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 00-.031-.03z"/></svg>
         Join Discord
       </a>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ── FOUNDER ── -->
+<section id="founder">
+  <div class="container">
+    <h2 class="s-title rv">Founder</h2>
+    <div class="founder-card rv rv-1">
+      <div class="founder-text">
+        <div class="founder-name">Xi Zhang</div>
+        <div class="founder-role">Founder of EvoScientist</div>
+        <p class="founder-bio">EvoScientist is a living research system built on a single conviction: full research autonomy is coming — but it won't come from a pre-built product. It will emerge from your own harness — a system that absorbs your judgment, encodes your taste, and compounds with every run. I call this <a href="https://x-izhang.github.io/blog/vibe-research/" target="_blank" rel="noopener">Harness Vibe Research</a>, and formalized its foundations as the <strong><a href="https://x-izhang.github.io/blog/agentlaw/" target="_blank" rel="noopener">Three Laws of Self-Evolving AI Agents</a></strong> — a framework for adaptive, collaborative, and lifelong agentic systems introduced in <a href="https://x-izhang.github.io/publication/fang-2025-comprehensivesurveyselfevolvingai/" target="_blank" rel="noopener"><em>A Comprehensive Survey of Self-Evolving AI Agents: A New Paradigm Bridging Foundation Models and Lifelong Agentic Systems</em></a>. The question was never whether this shift is coming — it's whether you're building the harness to grow with it.</p>
+        <div class="founder-links">
+          <a href="https://x-izhang.github.io/" target="_blank" rel="noopener" class="btn-s" style="display:inline-flex;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+            Homepage
+          </a>
+        </div>
+      </div>
+      <div class="founder-photo">
+        <img src="https://x-izhang.github.io/author/xi-zhang/avatar.jpg" alt="Xi Zhang" loading="lazy">
+      </div>
     </div>
   </div>
 </section>
@@ -1416,6 +1530,33 @@
     e.forEach(en=>{if(en.isIntersecting) en.target.classList.add('vis');});
   },{threshold:0.08,rootMargin:'0px 0px -30px 0px'});
   document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
+
+  // Lazy-play surface demo videos only while in view
+  const vids=document.querySelectorAll('.surface-vid');
+  if(vids.length && 'IntersectionObserver' in window){
+    const vObs=new IntersectionObserver(es=>{
+      es.forEach(en=>{
+        const v=en.target;
+        if(en.isIntersecting){ v.play().catch(()=>{}); } else { v.pause(); }
+      });
+    },{threshold:0.25});
+    vids.forEach(v=>vObs.observe(v));
+  }
+
+  // Live GitHub star count (falls back to the hardcoded number on failure / rate limit)
+  (function(){
+    const nums=document.querySelectorAll('[data-gh-stars] .gh-stars-n');
+    if(!nums.length) return;
+    fetch('https://api.github.com/repos/EvoScientist/EvoScientist',{headers:{Accept:'application/vnd.github+json'}})
+      .then(r=>r.ok?r.json():null)
+      .then(d=>{
+        if(!d||typeof d.stargazers_count!=='number') return;
+        const n=d.stargazers_count;
+        const s=n>=1000?(n/1000).toFixed(1).replace(/\.0$/,'')+'k':String(n);
+        nums.forEach(el=>{el.textContent=s;});
+      })
+      .catch(()=>{});
+  })();
 
   // Smooth scroll
   document.querySelectorAll('a[href^="#"]').forEach(l=>{
