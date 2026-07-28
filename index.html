@@ -6,7 +6,9 @@
     (function(){
       try{
         var s = localStorage.getItem('evosci-lang');
-        var lang = s || (String(navigator.language||'').toLowerCase().indexOf('zh')===0 ? 'zh' : 'en');
+        var lang = s === 'zh' || s === 'en'
+          ? s
+          : (String(navigator.language||'').toLowerCase().indexOf('zh')===0 ? 'zh' : 'en');
         document.documentElement.lang = lang;
       }catch(e){ document.documentElement.lang = 'en'; }
     })();
@@ -21,7 +23,7 @@
   <link rel="icon" type="image/png" href="assets/EvoScientist_logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
   <style>
     :root {
       --bg-void: #050816;
@@ -512,9 +514,10 @@
     .feat {
       padding:1.8rem; background:var(--glass); border:1px solid var(--glass-b);
       border-radius:16px; backdrop-filter:blur(16px);
-      transition:0.4s cubic-bezier(0.16,1,0.3,1);
+      transition:0.4s cubic-bezier(0.16,1,0.3,1); min-width:0;
     }
     .feat:hover { border-color:var(--cyan-10); transform:translateY(-3px); box-shadow:0 20px 50px rgba(0,0,0,0.2); }
+    .feat code { overflow-wrap:anywhere; }
     .feat-icon {
       width:44px; height:44px; border-radius:12px; background:var(--cyan-06);
       border:1px solid var(--cyan-10); display:flex; align-items:center; justify-content:center;
@@ -676,7 +679,7 @@
     .footer-in { max-width:1200px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem; }
     .f-brand { display:flex; align-items:center; gap:0.45rem; font-weight:600; font-size:0.9rem; color:var(--text-3); }
     .f-brand svg { width:18px; height:18px; opacity:0.45; }
-    .f-links { display:flex; gap:2rem; list-style:none; }
+    .f-links { display:flex; flex-wrap:wrap; justify-content:center; gap:0.6rem 2rem; list-style:none; }
     .f-links a { font-size:0.82rem; color:var(--text-3); transition:color 0.2s; }
     .f-links a:hover { color:var(--cyan); }
     .f-copy { font-size:0.75rem; color:var(--text-3); font-family:var(--mono); }
@@ -752,6 +755,13 @@
       .team-core { grid-template-columns:1fr; }
       .awards-grid { grid-template-columns:1fr; }
       .nav-actions .nav-btn.paper { display:none; }
+    }
+    @media (max-width:360px) {
+      nav { gap:0.3rem; }
+      .nav-actions { gap:0.35rem; }
+      .nav-actions .nav-btn { padding:0.42rem 0.65rem; }
+      .nav-actions .nav-btn > svg,
+      .nav-actions .nav-btn .gh-stars { display:none; }
     }
   </style>
 </head>
@@ -1652,6 +1662,7 @@ flowchart LR
   (function(){
     const btns = document.querySelectorAll('.lang-toggle button[data-lang]');
     function setLang(lang, persist){
+      lang = lang === 'zh' ? 'zh' : 'en';
       document.documentElement.lang = lang;
       if(persist){ try{ localStorage.setItem('evosci-lang', lang); }catch(e){} }
       btns.forEach(function(b){ b.setAttribute('aria-pressed', String(b.dataset.lang===lang)); });
@@ -1790,6 +1801,18 @@ flowchart LR
         if(toggle) toggle.setAttribute('aria-expanded','false');
       }
     });
+  });
+
+  // Close the mobile navigation without forcing a pointer interaction.
+  addEventListener('keydown',e=>{
+    if(e.key !== 'Escape') return;
+    const links=document.querySelector('.nav-links');
+    const toggle=document.querySelector('.nav-toggle');
+    if(links?.classList.contains('open')){
+      links.classList.remove('open');
+      toggle?.setAttribute('aria-expanded','false');
+      toggle?.focus();
+    }
   });
 
   // ── Hero typewriter ──
