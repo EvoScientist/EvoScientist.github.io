@@ -829,7 +829,7 @@
       <div class="badges rv rv-3">
         <span class="badge c">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-          v0.2.4
+          v0.2.5
         </span>
         <span class="badge g">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
@@ -954,6 +954,13 @@
     <div class="cl-timeline rv rv-2">
       <div class="cl-item latest">
         <div class="cl-head">
+          <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.2.5" target="_blank" rel="noopener">v0.2.5</a>
+          <span class="cl-date">01 Aug 2026</span>
+        </div>
+        <div class="cl-text"><span data-l="en"><strong>Unified HITL &amp; new providers.</strong> Unified human-in-the-loop approval across the main agent and sync + async sub-agents; deepagents 0.7.0 with leaner built-in prompts and a recursive <code>delete</code> tool gated behind the same approval as <code>execute</code>; Requesty and Atlas Cloud as new LLM providers; fixes for unnamed tool calls, interrupted tool-call history on sync sub-agents, and deploy-mode port propagation.</span><span data-l="zh"><strong>统一 HITL 审批与新提供商。</strong>主智能体与同步 + 异步子智能体现在共用统一的人在回路审批；升级至 deepagents 0.7.0，内置提示更精简，并新增递归 <code>delete</code> 工具（与 <code>execute</code> 共用同一审批门控）；新增 Requesty 与 Atlas Cloud 两个 LLM 提供商；修复了未命名工具调用、同步子智能体的工具调用历史中断，以及 deploy 模式端口传递问题。</span></div>
+      </div>
+      <div class="cl-item">
+        <div class="cl-head">
           <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.2.4" target="_blank" rel="noopener">v0.2.4</a>
           <span class="cl-date">26 Jul 2026</span>
         </div>
@@ -980,14 +987,14 @@
         </div>
         <div class="cl-text"><span data-l="en"><strong>AutoSkills.</strong> EvoMemory drafts reusable skills from its own observation clusters for you to review via <code>/autoskills</code>; a new <code>--output-format stream-json</code> for headless / SDK clients; richer slash-command completions; Windows UTF-8 config reads; a TUI welcome-banner fix; langchain-openrouter 0.2.5.</span><span data-l="zh"><strong>AutoSkills。</strong>EvoMemory 会从自身的观察聚类中起草可复用技能，供你通过 <code>/autoskills</code> 审阅；为无头模式 / SDK 客户端新增 <code>--output-format stream-json</code>；更丰富的斜杠命令补全；Windows UTF-8 配置读取；修复 TUI 欢迎横幅；升级 langchain-openrouter 至 0.2.5。</span></div>
       </div>
-      <div class="cl-item">
-        <div class="cl-head">
-          <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.2.0" target="_blank" rel="noopener">v0.2.0</a>
-          <span class="cl-date">26 Jun 2026</span>
-        </div>
-        <div class="cl-text"><span data-l="en"><strong>Autonomy milestone.</strong> Scheduled tasks: cron-style recurring runs you set up with <code>/schedule</code> or natural language, running unattended with shell-access gating for safety; self-linking memory that connects related observations into a knowledge graph (complements / contradicts / supersedes) as it grows; a read-only <strong><code>GET /api/models</code></strong> endpoint exposing the model registry to the WebUI picker; the main agent now always keeps its memory tools available; deps: deepagents 0.6.12 / langchain-quickjs 0.3.2.</span><span data-l="zh"><strong>自主性里程碑。</strong>计划任务：通过 <code>/schedule</code> 或自然语言设置类 cron 的周期性运行，无人值守运行并通过 shell 访问权限门控确保安全；自关联记忆会随着增长将相关观察连接成知识图谱（互补 / 矛盾 / 取代）；新增只读端点 <strong><code>GET /api/models</code></strong>，向 WebUI 模型选择器暴露模型注册表；主智能体现在始终保持记忆工具可用；依赖升级：deepagents 0.6.12 / langchain-quickjs 0.3.2。</span></div>
-      </div>
       <div id="cl-rest">
+        <div class="cl-item">
+          <div class="cl-head">
+            <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.2.0" target="_blank" rel="noopener">v0.2.0</a>
+            <span class="cl-date">26 Jun 2026</span>
+          </div>
+          <div class="cl-text"><span data-l="en"><strong>Autonomy milestone.</strong> Scheduled tasks: cron-style recurring runs you set up with <code>/schedule</code> or natural language, running unattended with shell-access gating for safety; self-linking memory that connects related observations into a knowledge graph (complements / contradicts / supersedes) as it grows; a read-only <strong><code>GET /api/models</code></strong> endpoint exposing the model registry to the WebUI picker; the main agent now always keeps its memory tools available; deps: deepagents 0.6.12 / langchain-quickjs 0.3.2.</span><span data-l="zh"><strong>自主性里程碑。</strong>计划任务：通过 <code>/schedule</code> 或自然语言设置类 cron 的周期性运行，无人值守运行并通过 shell 访问权限门控确保安全；自关联记忆会随着增长将相关观察连接成知识图谱（互补 / 矛盾 / 取代）；新增只读端点 <strong><code>GET /api/models</code></strong>，向 WebUI 模型选择器暴露模型注册表；主智能体现在始终保持记忆工具可用；依赖升级：deepagents 0.6.12 / langchain-quickjs 0.3.2。</span></div>
+        </div>
         <div class="cl-item">
           <div class="cl-head">
             <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.1.9" target="_blank" rel="noopener">v0.1.9</a>
@@ -1124,7 +1131,7 @@
       </div>
     </div>
     <button class="cl-toggle rv" id="cl-toggle" type="button" aria-expanded="false" onclick="var r=document.getElementById('cl-rest'),o=r.classList.toggle('open');this.classList.toggle('open',o);this.setAttribute('aria-expanded',o);">
-      <span class="cl-toggle-label"><span class="cl-lmore"><span data-l="en">Show 19 earlier releases</span><span data-l="zh">展开 19 条更早的发布</span></span><span class="cl-lless"><span data-l="en">Show fewer releases</span><span data-l="zh">收起</span></span></span>
+      <span class="cl-toggle-label"><span class="cl-lmore"><span data-l="en">Show 20 earlier releases</span><span data-l="zh">展开 20 条更早的发布</span></span><span class="cl-lless"><span data-l="en">Show fewer releases</span><span data-l="zh">收起</span></span></span>
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
     </button>
   </div>
