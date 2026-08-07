@@ -829,7 +829,7 @@
       <div class="badges rv rv-3">
         <span class="badge c">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-          v0.2.5
+          v0.2.6
         </span>
         <span class="badge g">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
@@ -954,6 +954,13 @@
     <div class="cl-timeline rv rv-2">
       <div class="cl-item latest">
         <div class="cl-head">
+          <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.2.6" target="_blank" rel="noopener">v0.2.6</a>
+          <span class="cl-date">07 Aug 2026</span>
+        </div>
+        <div class="cl-text"><span data-l="en"><strong>Agent teams.</strong> Invite installed expert skills into a session (<code>/expert &lt;name&gt;</code>) for in-turn consults, parallel panels, or background jobs; configurable bind hosts for the langgraph dev backend and WebUI (loopback by default); Volcengine Coding Plan provider (<code>glm-5.2</code>, <code>kimi-k2.5</code>); Qwen3.8-Max on DashScope and OpenRouter (1M context); deepagents 0.7.5 with media placeholders instead of provider 400s; a blank tool-call ID fix for Kimi/Zhipu sessions.</span><span data-l="zh"><strong>智能体团队。</strong>可将已安装的专家技能邀请进会话（<code>/expert &lt;name&gt;</code>），用于回合内咨询、并行专家评审或后台任务；langgraph dev 后端与 WebUI 支持可配置的绑定主机（默认仅监听本机回环）；新增 Volcengine Coding Plan 提供商（<code>glm-5.2</code>、<code>kimi-k2.5</code>）；DashScope 与 OpenRouter 上新增 Qwen3.8-Max（100 万上下文）；升级至 deepagents 0.7.5，以媒体占位符替代提供商 400 报错；修复 Kimi/Zhipu 会话中工具调用 ID 为空的问题。</span></div>
+      </div>
+      <div class="cl-item">
+        <div class="cl-head">
           <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.2.5" target="_blank" rel="noopener">v0.2.5</a>
           <span class="cl-date">01 Aug 2026</span>
         </div>
@@ -980,14 +987,14 @@
         </div>
         <div class="cl-text"><span data-l="en"><strong>New models.</strong> Selectable in onboarding and <code>/model</code>: GPT-5.6 (sol, terra, luna) for OpenAI and OpenRouter, plus Grok 4.5 and Tencent Hunyuan HY3 on OpenRouter; tighter config-file permissions and a reworked onboarding OAuth flow for auxiliary models.</span><span data-l="zh"><strong>新模型。</strong>onboarding 与 <code>/model</code> 中新增可选模型：OpenAI 与 OpenRouter 上的 GPT-5.6（sol、terra、luna），以及 OpenRouter 上的 Grok 4.5 与腾讯混元 HY3；收紧了配置文件权限，并重构了辅助模型的 onboarding OAuth 流程。</span></div>
       </div>
-      <div class="cl-item">
-        <div class="cl-head">
-          <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.2.1" target="_blank" rel="noopener">v0.2.1</a>
-          <span class="cl-date">05 Jul 2026</span>
-        </div>
-        <div class="cl-text"><span data-l="en"><strong>AutoSkills.</strong> EvoMemory drafts reusable skills from its own observation clusters for you to review via <code>/autoskills</code>; a new <code>--output-format stream-json</code> for headless / SDK clients; richer slash-command completions; Windows UTF-8 config reads; a TUI welcome-banner fix; langchain-openrouter 0.2.5.</span><span data-l="zh"><strong>AutoSkills。</strong>EvoMemory 会从自身的观察聚类中起草可复用技能，供你通过 <code>/autoskills</code> 审阅；为无头模式 / SDK 客户端新增 <code>--output-format stream-json</code>；更丰富的斜杠命令补全；Windows UTF-8 配置读取；修复 TUI 欢迎横幅；升级 langchain-openrouter 至 0.2.5。</span></div>
-      </div>
       <div id="cl-rest">
+        <div class="cl-item">
+          <div class="cl-head">
+            <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.2.1" target="_blank" rel="noopener">v0.2.1</a>
+            <span class="cl-date">05 Jul 2026</span>
+          </div>
+          <div class="cl-text"><span data-l="en"><strong>AutoSkills.</strong> EvoMemory drafts reusable skills from its own observation clusters for you to review via <code>/autoskills</code>; a new <code>--output-format stream-json</code> for headless / SDK clients; richer slash-command completions; Windows UTF-8 config reads; a TUI welcome-banner fix; langchain-openrouter 0.2.5.</span><span data-l="zh"><strong>AutoSkills。</strong>EvoMemory 会从自身的观察聚类中起草可复用技能，供你通过 <code>/autoskills</code> 审阅；为无头模式 / SDK 客户端新增 <code>--output-format stream-json</code>；更丰富的斜杠命令补全；Windows UTF-8 配置读取；修复 TUI 欢迎横幅；升级 langchain-openrouter 至 0.2.5。</span></div>
+        </div>
         <div class="cl-item">
           <div class="cl-head">
             <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.2.0" target="_blank" rel="noopener">v0.2.0</a>
@@ -1131,7 +1138,7 @@
       </div>
     </div>
     <button class="cl-toggle rv" id="cl-toggle" type="button" aria-expanded="false" onclick="var r=document.getElementById('cl-rest'),o=r.classList.toggle('open');this.classList.toggle('open',o);this.setAttribute('aria-expanded',o);">
-      <span class="cl-toggle-label"><span class="cl-lmore"><span data-l="en">Show 20 earlier releases</span><span data-l="zh">展开 20 条更早的发布</span></span><span class="cl-lless"><span data-l="en">Show fewer releases</span><span data-l="zh">收起</span></span></span>
+      <span class="cl-toggle-label"><span class="cl-lmore"><span data-l="en">Show 21 earlier releases</span><span data-l="zh">展开 21 条更早的发布</span></span><span class="cl-lless"><span data-l="en">Show fewer releases</span><span data-l="zh">收起</span></span></span>
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
     </button>
   </div>
