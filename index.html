@@ -829,7 +829,7 @@
       <div class="badges rv rv-3">
         <span class="badge c">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-          v0.2.6
+          v0.2.7
         </span>
         <span class="badge g">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
@@ -954,6 +954,13 @@
     <div class="cl-timeline rv rv-2">
       <div class="cl-item latest">
         <div class="cl-head">
+          <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.2.7" target="_blank" rel="noopener">v0.2.7</a>
+          <span class="cl-date">14 Aug 2026</span>
+        </div>
+        <div class="cl-text"><span data-l="en"><strong>Faster startup &amp; new models.</strong> Lazy imports, a reusable kept-alive langgraph dev server, and indexed thread listing; new models: Gemini 3.7 Flash (Google + OpenRouter), DeepSeek V4 Pro 0813, Grok 4.6, and GLM-5.3 (Zhipu + OpenRouter); encrypted-webhook channels reject unsigned POSTs; MCP stdio servers start reliably under redirected streams on Windows; sub-agent tools resolve at dispatch time; <code>/compact</code> history offload restored on deepagents 0.7.6.</span><span data-l="zh"><strong>更快启动与新模型。</strong>启动提速：延迟导入、可复用的常驻 langgraph dev 服务器、索引化线程列表；新增模型：Gemini 3.7 Flash（Google 与 OpenRouter）、DeepSeek V4 Pro 0813、Grok 4.6 及 GLM-5.3（Zhipu 与 OpenRouter）；加密 webhook 渠道现在会拒绝未签名的 POST 请求；Windows 下 MCP stdio 服务器在重定向流环境中可稳定启动；子智能体工具改为在派发时解析；在 deepagents 0.7.6 上恢复了 <code>/compact</code> 历史卸载。</span></div>
+      </div>
+      <div class="cl-item">
+        <div class="cl-head">
           <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.2.6" target="_blank" rel="noopener">v0.2.6</a>
           <span class="cl-date">07 Aug 2026</span>
         </div>
@@ -980,14 +987,14 @@
         </div>
         <div class="cl-text"><span data-l="en"><strong>Kimi K3 &amp; provider fixes.</strong> Kimi K3 selectable on Moonshot and OpenRouter (1M context); async sub-agent runs no longer get stuck pending thanks to orphaned-run cleanup; Telegram slash commands; provider fixes (DeepSeek native SDK, GPT-5.x via ChatGPT OAuth, OpenAI <code>reasoning_effort</code>); quieter tool-selector streaming and smaller checkpoints.</span><span data-l="zh"><strong>Kimi K3 与提供商修复。</strong>Kimi K3 现可在 Moonshot 与 OpenRouter 上选用（100 万上下文）；通过孤立运行清理机制，异步子智能体运行不再卡在 pending 状态；新增 Telegram 斜杠命令；多项提供商修复（DeepSeek 原生 SDK、通过 ChatGPT OAuth 使用 GPT-5.x、OpenAI <code>reasoning_effort</code>）；工具选择器流式输出更安静，检查点体积更小。</span></div>
       </div>
-      <div class="cl-item">
-        <div class="cl-head">
-          <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.2.2" target="_blank" rel="noopener">v0.2.2</a>
-          <span class="cl-date">11 Jul 2026</span>
-        </div>
-        <div class="cl-text"><span data-l="en"><strong>New models.</strong> Selectable in onboarding and <code>/model</code>: GPT-5.6 (sol, terra, luna) for OpenAI and OpenRouter, plus Grok 4.5 and Tencent Hunyuan HY3 on OpenRouter; tighter config-file permissions and a reworked onboarding OAuth flow for auxiliary models.</span><span data-l="zh"><strong>新模型。</strong>onboarding 与 <code>/model</code> 中新增可选模型：OpenAI 与 OpenRouter 上的 GPT-5.6（sol、terra、luna），以及 OpenRouter 上的 Grok 4.5 与腾讯混元 HY3；收紧了配置文件权限，并重构了辅助模型的 onboarding OAuth 流程。</span></div>
-      </div>
       <div id="cl-rest">
+        <div class="cl-item">
+          <div class="cl-head">
+            <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.2.2" target="_blank" rel="noopener">v0.2.2</a>
+            <span class="cl-date">11 Jul 2026</span>
+          </div>
+          <div class="cl-text"><span data-l="en"><strong>New models.</strong> Selectable in onboarding and <code>/model</code>: GPT-5.6 (sol, terra, luna) for OpenAI and OpenRouter, plus Grok 4.5 and Tencent Hunyuan HY3 on OpenRouter; tighter config-file permissions and a reworked onboarding OAuth flow for auxiliary models.</span><span data-l="zh"><strong>新模型。</strong>onboarding 与 <code>/model</code> 中新增可选模型：OpenAI 与 OpenRouter 上的 GPT-5.6（sol、terra、luna），以及 OpenRouter 上的 Grok 4.5 与腾讯混元 HY3；收紧了配置文件权限，并重构了辅助模型的 onboarding OAuth 流程。</span></div>
+        </div>
         <div class="cl-item">
           <div class="cl-head">
             <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.2.1" target="_blank" rel="noopener">v0.2.1</a>
@@ -1138,7 +1145,7 @@
       </div>
     </div>
     <button class="cl-toggle rv" id="cl-toggle" type="button" aria-expanded="false" onclick="var r=document.getElementById('cl-rest'),o=r.classList.toggle('open');this.classList.toggle('open',o);this.setAttribute('aria-expanded',o);">
-      <span class="cl-toggle-label"><span class="cl-lmore"><span data-l="en">Show 21 earlier releases</span><span data-l="zh">展开 21 条更早的发布</span></span><span class="cl-lless"><span data-l="en">Show fewer releases</span><span data-l="zh">收起</span></span></span>
+      <span class="cl-toggle-label"><span class="cl-lmore"><span data-l="en">Show 22 earlier releases</span><span data-l="zh">展开 22 条更早的发布</span></span><span class="cl-lless"><span data-l="en">Show fewer releases</span><span data-l="zh">收起</span></span></span>
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
     </button>
   </div>
