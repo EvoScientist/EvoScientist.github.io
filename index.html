@@ -829,7 +829,7 @@
       <div class="badges rv rv-3">
         <span class="badge c">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-          v0.2.10
+          v0.3.0
         </span>
         <span class="badge g">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
@@ -954,6 +954,13 @@
     <div class="cl-timeline rv rv-2">
       <div class="cl-item latest">
         <div class="cl-head">
+          <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.3.0" target="_blank" rel="noopener">v0.3.0</a>
+          <span class="cl-date">11 Sep 2026</span>
+        </div>
+        <div class="cl-text"><span data-l="en"><strong>Async sub-agents follow your model.</strong> Async sub-agents follow the caller's model; mid-session expert install without <code>/new</code>; MiniMax multi-turn fix; channel retry and OpenRouter attribution fixes.</span><span data-l="zh"><strong>异步子智能体跟随你的模型。</strong>异步子智能体现在跟随调用方的模型；会话中途安装专家无需 <code>/new</code>；修复 MiniMax 多轮对话；修复通道重试与 OpenRouter 归属标识问题。</span></div>
+      </div>
+      <div class="cl-item">
+        <div class="cl-head">
           <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.2.10" target="_blank" rel="noopener">v0.2.10</a>
           <span class="cl-date">05 Sep 2026</span>
         </div>
@@ -980,14 +987,14 @@
         </div>
         <div class="cl-text"><span data-l="en"><strong>Faster startup &amp; new models.</strong> Lazy imports, a reusable kept-alive langgraph dev server, and indexed thread listing; new models: Gemini 3.7 Flash (Google + OpenRouter), DeepSeek V4 Pro 0813, Grok 4.6, and GLM-5.3 (Zhipu + OpenRouter); encrypted-webhook channels reject unsigned POSTs; MCP stdio servers start reliably under redirected streams on Windows; sub-agent tools resolve at dispatch time; <code>/compact</code> history offload restored on deepagents 0.7.6.</span><span data-l="zh"><strong>更快启动与新模型。</strong>启动提速：延迟导入、可复用的常驻 langgraph dev 服务器、索引化线程列表；新增模型：Gemini 3.7 Flash（Google 与 OpenRouter）、DeepSeek V4 Pro 0813、Grok 4.6 及 GLM-5.3（Zhipu 与 OpenRouter）；加密 webhook 渠道现在会拒绝未签名的 POST 请求；Windows 下 MCP stdio 服务器在重定向流环境中可稳定启动；子智能体工具改为在派发时解析；在 deepagents 0.7.6 上恢复了 <code>/compact</code> 历史卸载。</span></div>
       </div>
-      <div class="cl-item">
-        <div class="cl-head">
-          <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.2.6" target="_blank" rel="noopener">v0.2.6</a>
-          <span class="cl-date">07 Aug 2026</span>
-        </div>
-        <div class="cl-text"><span data-l="en"><strong>Agent teams.</strong> Invite installed expert skills into a session (<code>/expert &lt;name&gt;</code>) for in-turn consults, parallel panels, or background jobs; configurable bind hosts for the langgraph dev backend and WebUI (loopback by default); Volcengine Coding Plan provider (<code>glm-5.2</code>, <code>kimi-k2.5</code>); Qwen3.8-Max on DashScope and OpenRouter (1M context); deepagents 0.7.5 with media placeholders instead of provider 400s; a blank tool-call ID fix for Kimi/Zhipu sessions.</span><span data-l="zh"><strong>智能体团队。</strong>可将已安装的专家技能邀请进会话（<code>/expert &lt;name&gt;</code>），用于回合内咨询、并行专家评审或后台任务；langgraph dev 后端与 WebUI 支持可配置的绑定主机（默认仅监听本机回环）；新增 Volcengine Coding Plan 提供商（<code>glm-5.2</code>、<code>kimi-k2.5</code>）；DashScope 与 OpenRouter 上新增 Qwen3.8-Max（100 万上下文）；升级至 deepagents 0.7.5，以媒体占位符替代提供商 400 报错；修复 Kimi/Zhipu 会话中工具调用 ID 为空的问题。</span></div>
-      </div>
       <div id="cl-rest">
+        <div class="cl-item">
+          <div class="cl-head">
+            <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.2.6" target="_blank" rel="noopener">v0.2.6</a>
+            <span class="cl-date">07 Aug 2026</span>
+          </div>
+          <div class="cl-text"><span data-l="en"><strong>Agent teams.</strong> Invite installed expert skills into a session (<code>/expert &lt;name&gt;</code>) for in-turn consults, parallel panels, or background jobs; configurable bind hosts for the langgraph dev backend and WebUI (loopback by default); Volcengine Coding Plan provider (<code>glm-5.2</code>, <code>kimi-k2.5</code>); Qwen3.8-Max on DashScope and OpenRouter (1M context); deepagents 0.7.5 with media placeholders instead of provider 400s; a blank tool-call ID fix for Kimi/Zhipu sessions.</span><span data-l="zh"><strong>智能体团队。</strong>可将已安装的专家技能邀请进会话（<code>/expert &lt;name&gt;</code>），用于回合内咨询、并行专家评审或后台任务；langgraph dev 后端与 WebUI 支持可配置的绑定主机（默认仅监听本机回环）；新增 Volcengine Coding Plan 提供商（<code>glm-5.2</code>、<code>kimi-k2.5</code>）；DashScope 与 OpenRouter 上新增 Qwen3.8-Max（100 万上下文）；升级至 deepagents 0.7.5，以媒体占位符替代提供商 400 报错；修复 Kimi/Zhipu 会话中工具调用 ID 为空的问题。</span></div>
+        </div>
         <div class="cl-item">
           <div class="cl-head">
             <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.2.5" target="_blank" rel="noopener">v0.2.5</a>
@@ -1417,7 +1424,7 @@ flowchart LR
   <div class="container">
     <div class="s-label rv"><span data-l="en">Multi-Provider</span><span data-l="zh">多提供商</span></div>
     <h2 class="s-title rv rv-1"><span data-l="en">Your models, your choice</span><span data-l="zh">你的模型，你做主</span></h2>
-    <p class="s-sub rv rv-2"><span data-l="en">Multiple LLM providers supported. One config to switch. Auto-detect model names or specify full IDs directly.</span><span data-l="zh">支持多家 LLM 提供商。一处配置即可切换。自动识别模型名，或直接指定完整 ID。</span></p>
+    <p class="s-sub rv rv-2"><span data-l="en">16 LLM providers, plus coding-plan subscriptions, OAuth sign-in, and local or self-hosted endpoints. One config to switch — use short model names or full IDs, and change models mid-session with <code style="font-family:var(--mono);font-size:0.85em;color:var(--cyan);">/model</code>.</span><span data-l="zh">支持 16 家 LLM 提供商，另有 Coding Plan 订阅、OAuth 登录，以及本地或自建端点。一处配置即可切换——可用模型短名或完整 ID，会话中随时用 <code style="font-family:var(--mono);font-size:0.85em;color:var(--cyan);">/model</code> 换模型。</span></p>
     <div class="prov-grid">
       <div class="prov rv rv-1">
         <div class="prov-name">
@@ -1425,7 +1432,7 @@ flowchart LR
           Anthropic
         </div>
         <div class="prov-models">
-          <span>claude-opus-4-6</span><span>claude-sonnet-4-6</span><span>claude-haiku-4-5</span>
+          <span>claude-fable-5-1</span><span>claude-opus-5</span><span>claude-sonnet-5</span>
         </div>
       </div>
       <div class="prov rv rv-2">
@@ -1434,7 +1441,7 @@ flowchart LR
           OpenAI
         </div>
         <div class="prov-models">
-          <span>gpt-4o</span><span>o3-mini</span><span>o1</span>
+          <span>gpt-6-astra</span><span>gpt-5.6-sol</span><span>gpt-5.3-codex</span>
         </div>
       </div>
       <div class="prov rv rv-3">
@@ -1443,62 +1450,151 @@ flowchart LR
           Google
         </div>
         <div class="prov-models">
-          <span>gemini-2.5-pro</span><span>gemini-2.5-flash</span><span>gemini-2.0-flash</span>
+          <span>gemini-3.8-flash</span><span>gemini-3.5-flash</span><span>gemini-3.1-pro</span>
         </div>
       </div>
-      <div class="prov rv rv-4">
+      <div class="prov rv rv-1">
         <div class="prov-name">
-          <span class="prov-icon" style="background:rgba(118,185,0,0.12);color:#76b900;">N</span>
-          NVIDIA
+          <span class="prov-icon" style="background:rgba(77,107,254,0.12);color:#4d6bfe;">D</span>
+          DeepSeek
         </div>
         <div class="prov-models">
-          <span>deepseek-r1</span><span>llama-3.3-70b</span><span>nemotron-ultra</span>
+          <span>deepseek-v4-pro</span><span>deepseek-v4-flash</span><span>deepseek-r1</span>
         </div>
       </div>
-      <div class="prov rv rv-5">
+      <div class="prov rv rv-2">
         <div class="prov-name">
-          <span class="prov-icon" style="background:rgba(99,102,241,0.12);color:#818cf8;">S</span>
-          SiliconFlow
+          <span class="prov-icon" style="background:rgba(167,139,250,0.12);color:#a78bfa;">K</span>
+          Moonshot / Kimi
         </div>
         <div class="prov-models">
-          <span>deepseek-v3</span><span>qwen-plus</span><span>glm-4</span>
+          <span>kimi-k3</span><span>kimi-k2.6</span><span>kimi-k2-thinking</span>
         </div>
       </div>
-      <div class="prov rv rv-6">
+      <div class="prov rv rv-3">
         <div class="prov-name">
-          <span class="prov-icon" style="background:rgba(251,146,60,0.12);color:#fb923c;">R</span>
-          OpenRouter
+          <span class="prov-icon" style="background:rgba(96,165,250,0.12);color:#60a5fa;">Z</span>
+          ZhipuAI
         </div>
         <div class="prov-models">
-          <span data-l="en">any model</span><span data-l="zh">任意模型</span><span data-l="en">unified API</span><span data-l="zh">统一 API</span><span data-l="en">auto-routing</span><span data-l="zh">自动路由</span>
+          <span>glm-5.3</span><span>glm-5.3-flash</span><span>glm-5v-turbo</span>
         </div>
       </div>
-      <div class="prov rv rv-7">
+      <div class="prov rv rv-1">
+        <div class="prov-name">
+          <span class="prov-icon" style="background:rgba(52,211,153,0.12);color:#34d399;">Q</span>
+          DashScope
+        </div>
+        <div class="prov-models">
+          <span>qwen3.8-max</span><span>qwen3.8-flash</span><span>qwen3-coder</span>
+        </div>
+      </div>
+      <div class="prov rv rv-2">
         <div class="prov-name">
           <span class="prov-icon" style="background:rgba(248,113,113,0.12);color:#f87171;">V</span>
           Volcengine
         </div>
         <div class="prov-models">
-          <span>doubao-pro</span><span>doubao-lite</span>
+          <span>doubao-seed-2.0-pro</span><span>doubao-seed-2.0-lite</span><span>doubao-seed-2.0-code</span>
         </div>
       </div>
-      <div class="prov rv rv-8">
+      <div class="prov rv rv-3">
         <div class="prov-name">
-          <span class="prov-icon" style="background:rgba(52,211,153,0.12);color:#34d399;">D</span>
-          DashScope
+          <span class="prov-icon" style="background:rgba(244,114,182,0.12);color:#f472b6;">M</span>
+          MiniMax
         </div>
         <div class="prov-models">
-          <span>qwen-max</span><span>qwen-turbo</span>
+          <span>minimax-m3</span><span>minimax-m2.7</span><span>minimax-m2.7-highspeed</span>
         </div>
       </div>
       <div class="prov rv rv-1">
         <div class="prov-name">
-          <span class="prov-icon" style="background:rgba(156,163,175,0.1);color:#9ca3af;">⚙</span>
+          <span class="prov-icon" style="background:rgba(118,185,0,0.12);color:#76b900;">N</span>
+          NVIDIA
+        </div>
+        <div class="prov-tag"><span data-l="en">inference cloud</span><span data-l="zh">推理云</span></div>
+        <div class="prov-models">
+          <span>nemotron-super</span><span>deepseek-v3.2</span><span>qwen3.5-397b</span>
+        </div>
+      </div>
+      <div class="prov rv rv-2">
+        <div class="prov-name">
+          <span class="prov-icon" style="background:rgba(251,146,60,0.12);color:#fb923c;">R</span>
+          OpenRouter
+        </div>
+        <div class="prov-tag"><span data-l="en">gateway</span><span data-l="zh">聚合网关</span></div>
+        <div class="prov-models">
+          <span>claude-fable-5.1</span><span>grok-4.6</span><span>muse-spark-1.3</span>
+        </div>
+      </div>
+      <div class="prov rv rv-3">
+        <div class="prov-name">
+          <span class="prov-icon" style="background:rgba(45,212,191,0.12);color:#2dd4bf;">R</span>
+          Requesty
+        </div>
+        <div class="prov-tag"><span data-l="en">gateway</span><span data-l="zh">聚合网关</span></div>
+        <div class="prov-models">
+          <span>claude-opus-4.8</span><span>gemini-3.5-flash</span><span>grok-4.3</span>
+        </div>
+      </div>
+      <div class="prov rv rv-1">
+        <div class="prov-name">
+          <span class="prov-icon" style="background:rgba(99,102,241,0.12);color:#818cf8;">S</span>
+          SiliconFlow
+        </div>
+        <div class="prov-tag"><span data-l="en">inference cloud</span><span data-l="zh">推理云</span></div>
+        <div class="prov-models">
+          <span>glm-5.2</span><span>kimi-k2.5</span><span>minimax-m2.5</span>
+        </div>
+      </div>
+      <div class="prov rv rv-2">
+        <div class="prov-name">
+          <span class="prov-icon" style="background:rgba(163,230,53,0.12);color:#a3e635;">N</span>
+          Novita AI
+        </div>
+        <div class="prov-tag"><span data-l="en">inference cloud</span><span data-l="zh">推理云</span></div>
+        <div class="prov-models">
+          <span>kimi-k3</span><span>glm-5.2</span><span>deepseek-v4-flash</span>
+        </div>
+      </div>
+      <div class="prov rv rv-3">
+        <div class="prov-name">
+          <span class="prov-icon" style="background:rgba(56,189,248,0.12);color:#38bdf8;">A</span>
+          Atlas Cloud
+        </div>
+        <div class="prov-tag"><span data-l="en">inference cloud</span><span data-l="zh">推理云</span></div>
+        <div class="prov-models">
+          <span>qwen3.5-27b</span>
+        </div>
+      </div>
+      <div class="prov rv rv-1">
+        <div class="prov-name">
+          <span class="prov-icon" style="background:rgba(250,204,21,0.12);color:#facc15; font-size:0.6rem;">&lt;/&gt;</span>
+          <span data-l="en">Coding Plans</span><span data-l="zh">Coding Plan 订阅</span>
+        </div>
+        <div class="prov-tag"><span data-l="en">subscription</span><span data-l="zh">订阅套餐</span></div>
+        <div class="prov-models">
+          <span>kimi-for-coding</span><span>zhipu-code · dashscope-code</span><span>volcengine-code</span>
+        </div>
+      </div>
+      <div class="prov rv rv-2">
+        <div class="prov-name">
+          <span class="prov-icon" style="background:rgba(0,229,255,0.12);color:var(--cyan);">⎆</span>
+          <span data-l="en">OAuth Sign-in</span><span data-l="zh">OAuth 登录</span>
+        </div>
+        <div class="prov-tag"><span data-l="en">no API key</span><span data-l="zh">无需 API Key</span></div>
+        <div class="prov-models">
+          <span>Claude subscription</span><span>ChatGPT / Codex</span>
+        </div>
+      </div>
+      <div class="prov rv rv-3">
+        <div class="prov-name">
+          <span class="prov-icon" style="background:rgba(156,163,175,0.12);color:#9ca3af;">⚙</span>
           <span data-l="en">Ollama &amp; Custom</span><span data-l="zh">Ollama 与自建</span>
         </div>
         <div class="prov-tag"><span data-l="en">local / self-hosted</span><span data-l="zh">本地 / 自建</span></div>
         <div class="prov-models">
-          <span>ollama: prefix</span><span>custom base_url</span>
+          <span>ollama: prefix</span><span>OpenAI-compatible</span><span>Anthropic-compatible</span>
         </div>
       </div>
     </div>
@@ -1896,7 +1992,7 @@ flowchart LR
       [1800,'<span class="q">❯ Auth mode: </span><span class="ans">API Key</span>'],
       [2200,'<span class="q">❯ Anthropic API key: </span><span class="dim">Validating…</span>'],
       [2900,'<span class="q">❯ Anthropic API key: </span><span class="dim">Validating… </span><span class="success">✓ Valid</span>'],
-      [3300,'<span class="q">❯ Model: </span><span class="ans">claude-opus-4-6</span>'],
+      [3300,'<span class="q">❯ Model: </span><span class="ans">claude-opus-5</span>'],
       [3700,'<span class="q">❯ Tavily search key: </span><span class="dim">Validating… </span><span class="success">✓ Valid</span>'],
       [4100,'<span class="q">❯ Workspace mode: </span><span class="ans">Daemon (persistent)</span>'],
       [4500,'<span class="q">❯ Channels: </span><span class="ans">iMessage  </span><span class="success">✓ imsg found</span>'],
