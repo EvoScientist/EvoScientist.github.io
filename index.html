@@ -829,7 +829,7 @@
       <div class="badges rv rv-3">
         <span class="badge c">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-          v0.3.0
+          v0.3.1
         </span>
         <span class="badge g">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
@@ -954,6 +954,13 @@
     <div class="cl-timeline rv rv-2">
       <div class="cl-item latest">
         <div class="cl-head">
+          <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.3.1" target="_blank" rel="noopener">v0.3.1</a>
+          <span class="cl-date">19 Sep 2026</span>
+        </div>
+        <div class="cl-text"><span data-l="en"><strong>Multilingual memory search &amp; new models.</strong> New models: GLM-5.3-FlashX (Zhipu + OpenRouter), DeepSeek-V4.1-Flash (DeepSeek + OpenRouter); memory search handles Chinese and other languages written without word spaces; opt-in LangGraph server gateway backend (<code>gateway_backend</code>, off by default); HITL approval routed through one shared policy; model fallback chain fix; deepagents 0.7.15.</span><span data-l="zh"><strong>多语言记忆检索与新模型。</strong>新增模型：GLM-5.3-FlashX（智谱与 OpenRouter）、DeepSeek-V4.1-Flash（DeepSeek 与 OpenRouter）；记忆检索支持中文等不以空格分词的语言；可选的 LangGraph server 网关后端（<code>gateway_backend</code>，默认关闭）；HITL 审批统一走同一套策略；修复模型 fallback 链；deepagents 0.7.15。</span></div>
+      </div>
+      <div class="cl-item">
+        <div class="cl-head">
           <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.3.0" target="_blank" rel="noopener">v0.3.0</a>
           <span class="cl-date">11 Sep 2026</span>
         </div>
@@ -980,14 +987,14 @@
         </div>
         <div class="cl-text"><span data-l="en"><strong>Faster deploy-mode rebuilds &amp; Novita AI.</strong> Deploy-mode graph rebuilds drop from ~15 s to under a second; resume commands no longer crash and empty session history; Novita AI as a new LLM provider; NVIDIA BioNeMo Agent Toolkit in onboarding's recommended skill packs; bounded routed reasoning with empty truncations surfaced as errors; a subscription OAuth recipe in the docs; deepagents 0.7.8.</span><span data-l="zh"><strong>更快的 deploy 模式重建与 Novita AI。</strong>deploy 模式下的图重建耗时从约 15 秒降至 1 秒以内；resume 命令不再崩溃或清空会话历史；新增 Novita AI 作为 LLM 提供商；onboarding 推荐技能包中加入 NVIDIA BioNeMo Agent Toolkit；路由推理加入上限约束，空截断会以错误形式明确提示；文档新增订阅制 OAuth 使用指南；升级至 deepagents 0.7.8。</span></div>
       </div>
-      <div class="cl-item">
-        <div class="cl-head">
-          <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.2.7" target="_blank" rel="noopener">v0.2.7</a>
-          <span class="cl-date">14 Aug 2026</span>
-        </div>
-        <div class="cl-text"><span data-l="en"><strong>Faster startup &amp; new models.</strong> Lazy imports, a reusable kept-alive langgraph dev server, and indexed thread listing; new models: Gemini 3.7 Flash (Google + OpenRouter), DeepSeek V4 Pro 0813, Grok 4.6, and GLM-5.3 (Zhipu + OpenRouter); encrypted-webhook channels reject unsigned POSTs; MCP stdio servers start reliably under redirected streams on Windows; sub-agent tools resolve at dispatch time; <code>/compact</code> history offload restored on deepagents 0.7.6.</span><span data-l="zh"><strong>更快启动与新模型。</strong>启动提速：延迟导入、可复用的常驻 langgraph dev 服务器、索引化线程列表；新增模型：Gemini 3.7 Flash（Google 与 OpenRouter）、DeepSeek V4 Pro 0813、Grok 4.6 及 GLM-5.3（Zhipu 与 OpenRouter）；加密 webhook 渠道现在会拒绝未签名的 POST 请求；Windows 下 MCP stdio 服务器在重定向流环境中可稳定启动；子智能体工具改为在派发时解析；在 deepagents 0.7.6 上恢复了 <code>/compact</code> 历史卸载。</span></div>
-      </div>
       <div id="cl-rest">
+        <div class="cl-item">
+          <div class="cl-head">
+            <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.2.7" target="_blank" rel="noopener">v0.2.7</a>
+            <span class="cl-date">14 Aug 2026</span>
+          </div>
+          <div class="cl-text"><span data-l="en"><strong>Faster startup &amp; new models.</strong> Lazy imports, a reusable kept-alive langgraph dev server, and indexed thread listing; new models: Gemini 3.7 Flash (Google + OpenRouter), DeepSeek V4 Pro 0813, Grok 4.6, and GLM-5.3 (Zhipu + OpenRouter); encrypted-webhook channels reject unsigned POSTs; MCP stdio servers start reliably under redirected streams on Windows; sub-agent tools resolve at dispatch time; <code>/compact</code> history offload restored on deepagents 0.7.6.</span><span data-l="zh"><strong>更快启动与新模型。</strong>启动提速：延迟导入、可复用的常驻 langgraph dev 服务器、索引化线程列表；新增模型：Gemini 3.7 Flash（Google 与 OpenRouter）、DeepSeek V4 Pro 0813、Grok 4.6 及 GLM-5.3（Zhipu 与 OpenRouter）；加密 webhook 渠道现在会拒绝未签名的 POST 请求；Windows 下 MCP stdio 服务器在重定向流环境中可稳定启动；子智能体工具改为在派发时解析；在 deepagents 0.7.6 上恢复了 <code>/compact</code> 历史卸载。</span></div>
+        </div>
         <div class="cl-item">
           <div class="cl-head">
             <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.2.6" target="_blank" rel="noopener">v0.2.6</a>
@@ -1459,7 +1466,7 @@ flowchart LR
           DeepSeek
         </div>
         <div class="prov-models">
-          <span>deepseek-v4-pro</span><span>deepseek-v4-flash</span><span>deepseek-r1</span>
+          <span>deepseek-v4-pro</span><span>deepseek-v4-flash</span><span>deepseek-flash</span>
         </div>
       </div>
       <div class="prov rv rv-2">
@@ -1477,7 +1484,7 @@ flowchart LR
           ZhipuAI
         </div>
         <div class="prov-models">
-          <span>glm-5.3</span><span>glm-5.3-flash</span><span>glm-5v-turbo</span>
+          <span>glm-5.3</span><span>glm-5.3-flashx</span><span>glm-5v-turbo</span>
         </div>
       </div>
       <div class="prov rv rv-1">
