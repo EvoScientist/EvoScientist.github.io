@@ -829,7 +829,7 @@
       <div class="badges rv rv-3">
         <span class="badge c">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-          v0.3.3
+          v0.3.4
         </span>
         <span class="badge g">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
@@ -954,6 +954,13 @@
     <div class="cl-timeline rv rv-2">
       <div class="cl-item latest">
         <div class="cl-head">
+          <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.3.4" target="_blank" rel="noopener">v0.3.4</a>
+          <span class="cl-date">29 Sep 2026</span>
+        </div>
+        <div class="cl-text"><span data-l="en"><strong>Claude Sonnet 5.5 &amp; desktop groundwork.</strong> New model: Claude Sonnet 5.5 (Anthropic + OpenRouter); desktop groundwork: the WebUI launcher becomes a shell-agnostic core with a background-job check; Windows fixes for local-server detection behind a system proxy, Ctrl+C isolation of the langgraph dev server, and the <code>EvoSci server stop</code> command; memory workers and scheduled-task grading fixed on native DeepSeek.</span><span data-l="zh"><strong>Claude Sonnet 5.5 与桌面端铺垫。</strong>新增模型：Claude Sonnet 5.5（Anthropic 与 OpenRouter）；桌面端铺垫：WebUI 启动器重构为与 shell 无关的核心，并提供后台任务检测；Windows 修复：系统代理下能正确识别本地服务、langgraph dev 服务不再被终端 Ctrl+C 波及、<code>EvoSci server stop</code> 命令可用；修复原生 DeepSeek 下的记忆 worker 与定时任务验收评分。</span></div>
+      </div>
+      <div class="cl-item">
+        <div class="cl-head">
           <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.3.3" target="_blank" rel="noopener">v0.3.3</a>
           <span class="cl-date">26 Sep 2026</span>
         </div>
@@ -980,14 +987,14 @@
         </div>
         <div class="cl-text"><span data-l="en"><strong>Async sub-agents follow your model.</strong> Async sub-agents follow the caller's model; mid-session expert install without <code>/new</code>; MiniMax multi-turn fix; channel retry and OpenRouter attribution fixes.</span><span data-l="zh"><strong>异步子智能体跟随你的模型。</strong>异步子智能体现在跟随调用方的模型；会话中途安装专家无需 <code>/new</code>；修复 MiniMax 多轮对话；修复通道重试与 OpenRouter 归属标识问题。</span></div>
       </div>
-      <div class="cl-item">
-        <div class="cl-head">
-          <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.2.10" target="_blank" rel="noopener">v0.2.10</a>
-          <span class="cl-date">05 Sep 2026</span>
-        </div>
-        <div class="cl-text"><span data-l="en"><strong>Claude Fable 5.1, GPT-6 Astra &amp; proactivity phase 1.</strong> New models: Claude Fable 5.1, GPT-6 Astra, Gemini 3.8 Flash, and Meta Muse Spark 1.3; proactivity phase 1: a first-contact profile bootstrap that eases cold start; optional acceptance checklists for scheduled tasks; tool selection only kicks in above 42 tools; deepagents 0.7.13.</span><span data-l="zh"><strong>Claude Fable 5.1、GPT-6 Astra 与主动性第一阶段。</strong>新增模型：Claude Fable 5.1、GPT-6 Astra、Gemini 3.8 Flash 及 Meta Muse Spark 1.3；主动性第一阶段：首次对话即进行画像引导，缓解冷启动；定时任务支持可选的验收清单；工具数超过 42 个时才启用工具选择；升级至 deepagents 0.7.13。</span></div>
-      </div>
       <div id="cl-rest">
+        <div class="cl-item">
+          <div class="cl-head">
+            <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.2.10" target="_blank" rel="noopener">v0.2.10</a>
+            <span class="cl-date">05 Sep 2026</span>
+          </div>
+          <div class="cl-text"><span data-l="en"><strong>Claude Fable 5.1, GPT-6 Astra &amp; proactivity phase 1.</strong> New models: Claude Fable 5.1, GPT-6 Astra, Gemini 3.8 Flash, and Meta Muse Spark 1.3; proactivity phase 1: a first-contact profile bootstrap that eases cold start; optional acceptance checklists for scheduled tasks; tool selection only kicks in above 42 tools; deepagents 0.7.13.</span><span data-l="zh"><strong>Claude Fable 5.1、GPT-6 Astra 与主动性第一阶段。</strong>新增模型：Claude Fable 5.1、GPT-6 Astra、Gemini 3.8 Flash 及 Meta Muse Spark 1.3；主动性第一阶段：首次对话即进行画像引导，缓解冷启动；定时任务支持可选的验收清单；工具数超过 42 个时才启用工具选择；升级至 deepagents 0.7.13。</span></div>
+        </div>
         <div class="cl-item">
           <div class="cl-head">
             <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.2.9" target="_blank" rel="noopener">v0.2.9</a>
@@ -1453,7 +1460,7 @@ flowchart LR
           Anthropic
         </div>
         <div class="prov-models">
-          <span>claude-opus-5-5</span><span>claude-fable-5-1</span><span>claude-sonnet-5</span>
+          <span>claude-opus-5-5</span><span>claude-fable-5-1</span><span>claude-sonnet-5-5</span>
         </div>
       </div>
       <div class="prov rv rv-2">
