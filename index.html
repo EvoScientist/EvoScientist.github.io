@@ -829,7 +829,7 @@
       <div class="badges rv rv-3">
         <span class="badge c">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-          v0.3.4
+          v0.3.5
         </span>
         <span class="badge g">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
@@ -954,6 +954,13 @@
     <div class="cl-timeline rv rv-2">
       <div class="cl-item latest">
         <div class="cl-head">
+          <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.3.5" target="_blank" rel="noopener">v0.3.5</a>
+          <span class="cl-date">03 Oct 2026</span>
+        </div>
+        <div class="cl-text"><span data-l="en"><strong>GPT-6.1 Sol &amp; <code>EvoSci setup</code>.</strong> New model: GPT-6.1 Sol (OpenAI + OpenRouter); a new <code>EvoSci setup</code> command as groundwork for installer distribution; profile memory over its budget truncates only the oversized file instead of dropping all of it; the observation index lists the newest observations first; deepagents 0.7.21.</span><span data-l="zh"><strong>GPT-6.1 Sol 与 <code>EvoSci setup</code>。</strong>新增模型：GPT-6.1 Sol（OpenAI 与 OpenRouter）；新增 <code>EvoSci setup</code> 命令，为安装分发做准备；优化 profile 记忆注入，超出预算时只截断超出的文件，不再整体丢弃；优化 observation 索引，最新的条目优先；deepagents 0.7.21。</span></div>
+      </div>
+      <div class="cl-item">
+        <div class="cl-head">
           <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.3.4" target="_blank" rel="noopener">v0.3.4</a>
           <span class="cl-date">29 Sep 2026</span>
         </div>
@@ -980,14 +987,14 @@
         </div>
         <div class="cl-text"><span data-l="en"><strong>Multilingual memory search &amp; new models.</strong> New models: GLM-5.3-FlashX (Zhipu + OpenRouter), DeepSeek-V4.1-Flash (DeepSeek + OpenRouter); memory search handles Chinese and other languages written without word spaces; opt-in LangGraph server gateway backend (<code>gateway_backend</code>, off by default); HITL approval routed through one shared policy; model fallback chain fix; deepagents 0.7.15.</span><span data-l="zh"><strong>多语言记忆检索与新模型。</strong>新增模型：GLM-5.3-FlashX（智谱与 OpenRouter）、DeepSeek-V4.1-Flash（DeepSeek 与 OpenRouter）；记忆检索支持中文等不以空格分词的语言；可选的 LangGraph server 网关后端（<code>gateway_backend</code>，默认关闭）；HITL 审批统一走同一套策略；修复模型 fallback 链；deepagents 0.7.15。</span></div>
       </div>
-      <div class="cl-item">
-        <div class="cl-head">
-          <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.3.0" target="_blank" rel="noopener">v0.3.0</a>
-          <span class="cl-date">11 Sep 2026</span>
-        </div>
-        <div class="cl-text"><span data-l="en"><strong>Async sub-agents follow your model.</strong> Async sub-agents follow the caller's model; mid-session expert install without <code>/new</code>; MiniMax multi-turn fix; channel retry and OpenRouter attribution fixes.</span><span data-l="zh"><strong>异步子智能体跟随你的模型。</strong>异步子智能体现在跟随调用方的模型；会话中途安装专家无需 <code>/new</code>；修复 MiniMax 多轮对话；修复通道重试与 OpenRouter 归属标识问题。</span></div>
-      </div>
       <div id="cl-rest">
+        <div class="cl-item">
+          <div class="cl-head">
+            <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.3.0" target="_blank" rel="noopener">v0.3.0</a>
+            <span class="cl-date">11 Sep 2026</span>
+          </div>
+          <div class="cl-text"><span data-l="en"><strong>Async sub-agents follow your model.</strong> Async sub-agents follow the caller's model; mid-session expert install without <code>/new</code>; MiniMax multi-turn fix; channel retry and OpenRouter attribution fixes.</span><span data-l="zh"><strong>异步子智能体跟随你的模型。</strong>异步子智能体现在跟随调用方的模型；会话中途安装专家无需 <code>/new</code>；修复 MiniMax 多轮对话；修复通道重试与 OpenRouter 归属标识问题。</span></div>
+        </div>
         <div class="cl-item">
           <div class="cl-head">
             <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.2.10" target="_blank" rel="noopener">v0.2.10</a>
@@ -1469,7 +1476,7 @@ flowchart LR
           OpenAI
         </div>
         <div class="prov-models">
-          <span>gpt-6-astra</span><span>gpt-6-sol</span><span>gpt-5.3-codex</span>
+          <span>gpt-6.1-sol</span><span>gpt-6-astra</span><span>gpt-5.3-codex</span>
         </div>
       </div>
       <div class="prov rv rv-3">
