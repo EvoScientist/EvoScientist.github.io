@@ -522,6 +522,7 @@
     /* ── Providers ── */
     #providers { background:linear-gradient(180deg,transparent,var(--cyan-03),transparent); padding:7rem 2rem; }
     .prov-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; margin-top:3.5rem; }
+    .prov-wide { grid-column:span 2; }
     .prov {
       padding:1.5rem 1.2rem; background:var(--glass); border:1px solid var(--glass-b);
       border-radius:14px; backdrop-filter:blur(16px); text-align:center;
@@ -684,6 +685,7 @@
       .hero-orbitals { left:50%; top:62%; }
       .feat-grid { grid-template-columns:repeat(2,1fr); }
       .prov-grid { grid-template-columns:repeat(2,1fr); }
+      .prov-wide { grid-column:auto; }
       .awards-grid { grid-template-columns:1fr 1fr; }
       .team-core { grid-template-columns:repeat(2,1fr); }
       .channels-grid { grid-template-columns:repeat(5,1fr); }
@@ -821,7 +823,7 @@
       <div class="badges rv rv-3">
         <span class="badge c">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-          v0.3.5
+          v0.3.6
         </span>
         <span class="badge g">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
@@ -945,6 +947,13 @@
     <div class="cl-timeline rv rv-2">
       <div class="cl-item latest">
         <div class="cl-head">
+          <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.3.6" target="_blank" rel="noopener">v0.3.6</a>
+          <span class="cl-date">09 Oct 2026</span>
+        </div>
+        <div class="cl-text"><span data-l="en"><strong>Skills apply instantly, Opper &amp; project-scoped sessions.</strong> New model: Claude Haiku 5.5 (OpenRouter); new provider: Opper; installed skills apply from the next message without <code>/new</code>, and <code>/skill-name</code> pins a skill to a message; the WebUI installs locally and starts offline; on Windows the agent's commands run in Git Bash set up by <code>EvoSci setup</code>; sessions, memory and scheduled tasks are scoped to their project, and <code>/threads</code> shows each thread's workspace; a slow MCP server no longer stalls the server start; deepagents 0.7.23.</span><span data-l="zh"><strong>Skill 即装即用、Opper 与按项目隔离的会话。</strong>新增模型：Claude Haiku 5.5（OpenRouter）；新增 Opper 提供商；安装的 skill 从下一条消息起生效，无需 <code>/new</code>，<code>/skill-name</code> 可在消息中点名使用某个 skill；WebUI 改为本地安装，可离线启动；Windows 下 agent 的命令改在 <code>EvoSci setup</code> 配置的 Git Bash 中运行；会话、记忆与定时任务按项目隔离，<code>/threads</code> 显示每个会话所属的工作区；响应慢的 MCP 服务不再拖住服务启动；deepagents 0.7.23。</span></div>
+      </div>
+      <div class="cl-item">
+        <div class="cl-head">
           <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.3.5" target="_blank" rel="noopener">v0.3.5</a>
           <span class="cl-date">03 Oct 2026</span>
         </div>
@@ -971,14 +980,14 @@
         </div>
         <div class="cl-text"><span data-l="en"><strong>Opus 5.5, GPT-6 Sol/Luna &amp; Xiaomi MiMo.</strong> New models: Claude Opus 5.5, GPT-6 Sol/Luna, MiMo-V2.6-Pro/Flash (new Xiaomi provider), and Grok 4.7; fixes for Anthropic-protocol requests and Ctrl+C during tool runs; deepagents 0.7.18.</span><span data-l="zh"><strong>Opus 5.5、GPT-6 Sol/Luna 与小米 MiMo。</strong>新增模型：Claude Opus 5.5、GPT-6 Sol/Luna、MiMo-V2.6-Pro/Flash（新增小米 provider）与 Grok 4.7；修复 Anthropic 协议请求报错与工具运行中 Ctrl+C 的问题；deepagents 0.7.18。</span></div>
       </div>
-      <div class="cl-item">
-        <div class="cl-head">
-          <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.3.1" target="_blank" rel="noopener">v0.3.1</a>
-          <span class="cl-date">19 Sep 2026</span>
-        </div>
-        <div class="cl-text"><span data-l="en"><strong>Multilingual memory search &amp; new models.</strong> New models: GLM-5.3-FlashX (Zhipu + OpenRouter), DeepSeek-V4.1-Flash (DeepSeek + OpenRouter); memory search handles Chinese and other languages written without word spaces; opt-in LangGraph server gateway backend (<code>gateway_backend</code>, off by default); HITL approval routed through one shared policy; model fallback chain fix; deepagents 0.7.15.</span><span data-l="zh"><strong>多语言记忆检索与新模型。</strong>新增模型：GLM-5.3-FlashX（智谱与 OpenRouter）、DeepSeek-V4.1-Flash（DeepSeek 与 OpenRouter）；记忆检索支持中文等不以空格分词的语言；可选的 LangGraph server 网关后端（<code>gateway_backend</code>，默认关闭）；HITL 审批统一走同一套策略；修复模型 fallback 链；deepagents 0.7.15。</span></div>
-      </div>
       <div id="cl-rest">
+        <div class="cl-item">
+          <div class="cl-head">
+            <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.3.1" target="_blank" rel="noopener">v0.3.1</a>
+            <span class="cl-date">19 Sep 2026</span>
+          </div>
+          <div class="cl-text"><span data-l="en"><strong>Multilingual memory search &amp; new models.</strong> New models: GLM-5.3-FlashX (Zhipu + OpenRouter), DeepSeek-V4.1-Flash (DeepSeek + OpenRouter); memory search handles Chinese and other languages written without word spaces; opt-in LangGraph server gateway backend (<code>gateway_backend</code>, off by default); HITL approval routed through one shared policy; model fallback chain fix; deepagents 0.7.15.</span><span data-l="zh"><strong>多语言记忆检索与新模型。</strong>新增模型：GLM-5.3-FlashX（智谱与 OpenRouter）、DeepSeek-V4.1-Flash（DeepSeek 与 OpenRouter）；记忆检索支持中文等不以空格分词的语言；可选的 LangGraph server 网关后端（<code>gateway_backend</code>，默认关闭）；HITL 审批统一走同一套策略；修复模型 fallback 链；deepagents 0.7.15。</span></div>
+        </div>
         <div class="cl-item">
           <div class="cl-head">
             <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.3.0" target="_blank" rel="noopener">v0.3.0</a>
@@ -1450,7 +1459,7 @@ flowchart LR
   <div class="container">
     <div class="s-label rv"><span data-l="en">Multi-Provider</span><span data-l="zh">多提供商</span></div>
     <h2 class="s-title rv rv-1"><span data-l="en">Your models, your choice</span><span data-l="zh">你的模型，你做主</span></h2>
-    <p class="s-sub rv rv-2"><span data-l="en">17 LLM providers, plus coding-plan subscriptions, OAuth sign-in, and local or self-hosted endpoints. One config to switch — use short model names or full IDs, and change models mid-session with <code style="font-family:var(--mono);font-size:0.85em;color:var(--cyan);">/model</code>.</span><span data-l="zh">支持 17 家 LLM 提供商，另有 Coding Plan 订阅、OAuth 登录，以及本地或自建端点。一处配置即可切换——可用模型短名或完整 ID，会话中随时用 <code style="font-family:var(--mono);font-size:0.85em;color:var(--cyan);">/model</code> 换模型。</span></p>
+    <p class="s-sub rv rv-2"><span data-l="en">18 LLM providers, plus coding-plan subscriptions, OAuth sign-in, and local or self-hosted endpoints. One config to switch — use short model names or full IDs, and change models mid-session with <code style="font-family:var(--mono);font-size:0.85em;color:var(--cyan);">/model</code>.</span><span data-l="zh">支持 18 家 LLM 提供商，另有 Coding Plan 订阅、OAuth 登录，以及本地或自建端点。一处配置即可切换——可用模型短名或完整 ID，会话中随时用 <code style="font-family:var(--mono);font-size:0.85em;color:var(--cyan);">/model</code> 换模型。</span></p>
     <div class="prov-grid">
       <div class="prov rv rv-1">
         <div class="prov-name">
@@ -1572,6 +1581,16 @@ flowchart LR
           <span>claude-opus-4.8</span><span>gemini-3.5-flash</span><span>grok-4.3</span>
         </div>
       </div>
+      <div class="prov rv rv-2">
+        <div class="prov-name">
+          <span class="prov-icon" style="background:rgba(192,132,252,0.12);color:#c084fc;">O</span>
+          Opper
+        </div>
+        <div class="prov-tag"><span data-l="en">gateway</span><span data-l="zh">聚合网关</span></div>
+        <div class="prov-models">
+          <span>claude-opus-5</span><span>gpt-5.5</span><span>gemini-3.8-flash</span>
+        </div>
+      </div>
       <div class="prov rv rv-1">
         <div class="prov-name">
           <span class="prov-icon" style="background:rgba(99,102,241,0.12);color:#818cf8;">S</span>
@@ -1622,7 +1641,7 @@ flowchart LR
           <span>Claude subscription</span><span>ChatGPT / Codex</span>
         </div>
       </div>
-      <div class="prov rv rv-3" style="grid-column:1/-1;">
+      <div class="prov rv rv-3 prov-wide">
         <div class="prov-name">
           <span class="prov-icon" style="background:rgba(156,163,175,0.12);color:#9ca3af;">⚙</span>
           <span data-l="en">Ollama &amp; Custom</span><span data-l="zh">Ollama 与自建</span>
