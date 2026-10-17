@@ -237,17 +237,41 @@
     }
     .btn-s:hover { border-color:var(--cyan-50); box-shadow:0 0 30px var(--cyan-06); transform:translateY(-1px); }
     .btn-s svg { width:16px; height:16px; stroke:currentColor; fill:none; }
-    .install {
-      display:inline-flex; align-items:center; justify-content:space-between; gap:2rem;
-      padding:0.7rem 1.2rem; background:var(--glass); border:1px solid var(--glass-b);
-      border-radius:11px; font-family:var(--mono); font-size:0.82rem; cursor:pointer;
-      transition:0.3s; min-width:280px;
+    .install-box { width:min(100%,520px); }
+    .install-label { font-family:var(--mono); font-size:0.68rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--text-3); margin-bottom:0.55rem; }
+    .install-card {
+      background:var(--glass); border:1px solid var(--glass-b); border-radius:12px;
+      overflow:hidden; transition:0.3s;
     }
-    .install:hover { border-color:var(--cyan-20); box-shadow:0 0 30px var(--cyan-06); }
+    .install-card:hover, .install-card:focus-within { border-color:var(--cyan-20); box-shadow:0 0 30px var(--cyan-06); }
+    .install-tabs { display:grid; grid-template-columns:repeat(3,1fr); border-bottom:1px solid var(--glass-b); }
+    .install-tabs button {
+      font-family:var(--mono); font-size:0.76rem; padding:0.5rem 0.6rem; border:0; background:transparent;
+      color:var(--text-2); cursor:pointer; transition:color 0.2s, background 0.2s;
+    }
+    .install-tabs button + button { border-left:1px solid var(--glass-b); }
+    .install-tabs button:hover { color:var(--text-1); }
+    .install-tabs button[aria-pressed="true"] { color:var(--cyan); background:var(--cyan-06); box-shadow:inset 0 -2px 0 var(--cyan); }
+    .install {
+      display:flex; align-items:center; gap:1rem; width:100%; padding:0.75rem 1rem 0.75rem 1.1rem;
+      border:0; background:transparent; font-family:var(--mono); font-size:0.8rem; text-align:left; cursor:pointer;
+    }
+    .install-line {
+      flex:1; min-width:0; overflow-x:auto; white-space:nowrap; scrollbar-width:none;
+      -webkit-mask-image:linear-gradient(to right,#000 calc(100% - 1.5rem),transparent); mask-image:linear-gradient(to right,#000 calc(100% - 1.5rem),transparent);
+    }
+    .install-line::-webkit-scrollbar { display:none; }
     .install .pr { color:var(--cyan); }
     .install .cm { color:var(--text-2); }
-    .install .cp { color:var(--text-3); font-size:1rem; transition:color 0.2s; }
+    .install .cp { flex-shrink:0; display:inline-flex; color:var(--text-3); transition:color 0.2s; }
+    .install .cp svg { width:16px; height:16px; }
+    .install .cp-done, .install.copied .cp-copy { display:none; }
+    .install.copied .cp-done { display:block; color:var(--green); }
     .install:hover .cp { color:var(--cyan); }
+    .install-note { margin-top:0.6rem; font-size:0.78rem; line-height:1.6; color:var(--text-2); }
+    .install-note code { font-family:var(--mono); font-size:0.95em; color:var(--text-1); }
+    .install-note a { color:var(--text-1); border-bottom:1px solid var(--cyan-20); transition:0.2s; }
+    .install-note a:hover { color:var(--cyan); border-color:var(--cyan); }
     .scroll-h {
       position:absolute; bottom:2rem; left:50%; transform:translateX(-50%);
       color:var(--text-3); animation:sh 2s ease-in-out infinite;
@@ -291,7 +315,6 @@
     .hero-copy .badges, .hero-copy .hero-cta { justify-content:flex-start; }
     .hero-copy .badges { margin-bottom:1.35rem; }
     .hero-copy .hero-cta { margin-bottom:1rem; }
-    .hero-copy .install { width:min(100%,380px); }
     .hero-showcase {
       position:relative; min-width:0; isolation:isolate;
       filter:drop-shadow(0 32px 80px rgba(0,0,0,0.46));
@@ -709,7 +732,7 @@
       .hero-copy .hero-cta { display:grid; grid-template-columns:1fr 1fr; align-items:stretch; }
       .hero-copy .hero-cta a { justify-content:center; width:100%; }
       .hero-copy .hero-cta .btn-p { grid-column:1/-1; }
-      .hero-copy .install { width:100%; min-width:0; }
+      .install-box { width:100%; }
       .hero-float { display:none; }
       .hero-proof { grid-template-columns:repeat(2,1fr); margin-top:2.8rem; }
       .hero-proof-item:nth-child(2) { border-right:0; }
@@ -823,7 +846,7 @@
       <div class="badges rv rv-3">
         <span class="badge c">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-          v0.3.6
+          v0.3.7
         </span>
         <span class="badge g">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
@@ -842,13 +865,20 @@
         </a>
         <a href="#onboard" class="btn-s"><span data-l="en">Quick Start</span><span data-l="zh">快速开始</span></a>
       </div>
-      <div class="rv rv-5">
-        <button class="install" type="button"
-          onclick="navigator.clipboard.writeText('uv tool install EvoScientist');this.querySelector('.cp').textContent='✓';setTimeout(()=>this.querySelector('.cp').textContent='⌘',1500)"
-          aria-label="Copy installation command" title="Click to copy">
-          <span><span class="pr">$</span> <span class="cm">uv tool install EvoScientist</span></span>
-          <span class="cp" aria-hidden="true">⌘</span>
-        </button>
+      <div class="install-box rv rv-5" data-install>
+        <div class="install-label"><span data-l="en">Install via terminal</span><span data-l="zh">通过终端安装</span></div>
+        <div class="install-card">
+          <div class="install-tabs" role="group" aria-label="Operating system">
+            <button type="button" data-os="mac" aria-pressed="true">macOS</button>
+            <button type="button" data-os="linux" aria-pressed="false">Linux</button>
+            <button type="button" data-os="win" aria-pressed="false">Windows</button>
+          </div>
+          <button class="install" type="button" aria-label="Copy installation command" title="Click to copy">
+            <span class="install-line"><span class="pr" data-install-pr>$</span> <span class="cm" data-install-cmd>curl -fsSL https://evoscientist.ai/install.sh | bash</span></span>
+            <span class="cp" aria-hidden="true"><svg class="cp-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"/></svg><svg class="cp-done" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+          </button>
+        </div>
+        <p class="install-note"><span data-l="en">No Python, Node.js or uv needed. Then open a new terminal and run <code>EvoSci onboard</code>. <a href="https://github.com/EvoScientist/EvoScientist/blob/main/docs/guides/install.md" target="_blank" rel="noopener">Options, China mirrors &amp; uninstall ↗</a></span><span data-l="zh">无需预装 Python、Node.js 或 uv。装好后打开新终端运行 <code>EvoSci onboard</code>。<a href="https://github.com/EvoScientist/EvoScientist/blob/main/docs/guides/install.md" target="_blank" rel="noopener">安装选项、国内镜像与卸载 ↗</a></span></p>
       </div>
     </div>
 
@@ -947,6 +977,13 @@
     <div class="cl-timeline rv rv-2">
       <div class="cl-item latest">
         <div class="cl-head">
+          <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.3.7" target="_blank" rel="noopener">v0.3.7</a>
+          <span class="cl-date">17 Oct 2026</span>
+        </div>
+        <div class="cl-text"><span data-l="en"><strong>One-line install, goals &amp; proactive follow-ups.</strong> One-line install for macOS, Windows and Linux, and <code>EvoSci update</code> to move an install between releases; acceptance criteria and goals: <code>--rubric</code>, <code>/rubric</code> and <code>/goal</code> grade work against criteria you set; proactivity: <code>EvoSci serve</code> follows up in channel chats on its own (<code>/proactive</code>); sign in with ChatGPT directly; the backend answers browser requests only from trusted pages; transient model failures retry within a wait budget; new models: Claude Haiku 5.5 (Anthropic), Gemini 4 Argon, Muse Wonder and Muse Spark Open (OpenRouter), with the Claude lists trimmed to the four current models and Claude Sonnet 5.5 as the default; Windows channel attachments and <code>@file</code> mentions open in the file tools; deepagents 0.7.28.</span><span data-l="zh"><strong>一行命令安装、目标与主动跟进。</strong>macOS、Windows、Linux 一行命令安装，<code>EvoSci update</code> 可在版本之间切换；验收标准与目标：<code>--rubric</code>、<code>/rubric</code>、<code>/goal</code> 按你设定的标准检查工作结果；主动性：<code>EvoSci serve</code> 会在频道对话里主动跟进（<code>/proactive</code>）；可直接用 ChatGPT 账号登录；后端只响应可信页面的浏览器请求；模型调用遇到临时故障会在等待时限内重试；新增模型：Claude Haiku 5.5（Anthropic）、Gemini 4 Argon、Muse Wonder、Muse Spark Open（OpenRouter），Claude 列表精简为当前的四个模型，默认模型改为 Claude Sonnet 5.5；Windows 下频道附件和 <code>@file</code> 提及的文件可直接用文件工具打开；deepagents 0.7.28。</span></div>
+      </div>
+      <div class="cl-item">
+        <div class="cl-head">
           <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.3.6" target="_blank" rel="noopener">v0.3.6</a>
           <span class="cl-date">09 Oct 2026</span>
         </div>
@@ -973,14 +1010,14 @@
         </div>
         <div class="cl-text"><span data-l="en"><strong>Codex OAuth end to end.</strong> Codex OAuth (ChatGPT Plus/Pro) works end to end, with reasoning captured from vLLM-style endpoints; HITL resume limits count only human-prompted rounds; summarization follows the context window of the model actually running; per-surface gateway backend selection (off by default); async expert dispatch fix; deepagents 0.7.19.</span><span data-l="zh"><strong>Codex OAuth 端到端可用。</strong>Codex OAuth（ChatGPT Plus/Pro）端到端可用，并能捕获 vLLM 风格端点返回的推理内容；HITL 恢复轮次上限只统计真正提示过人的轮次；上下文压缩按实际运行的模型计算上下文窗口；各入口可单独选择网关后端（默认关闭）；修复异步 expert 调度；deepagents 0.7.19。</span></div>
       </div>
-      <div class="cl-item">
-        <div class="cl-head">
-          <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.3.2" target="_blank" rel="noopener">v0.3.2</a>
-          <span class="cl-date">23 Sep 2026</span>
-        </div>
-        <div class="cl-text"><span data-l="en"><strong>Opus 5.5, GPT-6 Sol/Luna &amp; Xiaomi MiMo.</strong> New models: Claude Opus 5.5, GPT-6 Sol/Luna, MiMo-V2.6-Pro/Flash (new Xiaomi provider), and Grok 4.7; fixes for Anthropic-protocol requests and Ctrl+C during tool runs; deepagents 0.7.18.</span><span data-l="zh"><strong>Opus 5.5、GPT-6 Sol/Luna 与小米 MiMo。</strong>新增模型：Claude Opus 5.5、GPT-6 Sol/Luna、MiMo-V2.6-Pro/Flash（新增小米 provider）与 Grok 4.7；修复 Anthropic 协议请求报错与工具运行中 Ctrl+C 的问题；deepagents 0.7.18。</span></div>
-      </div>
       <div id="cl-rest">
+        <div class="cl-item">
+          <div class="cl-head">
+            <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.3.2" target="_blank" rel="noopener">v0.3.2</a>
+            <span class="cl-date">23 Sep 2026</span>
+          </div>
+          <div class="cl-text"><span data-l="en"><strong>Opus 5.5, GPT-6 Sol/Luna &amp; Xiaomi MiMo.</strong> New models: Claude Opus 5.5, GPT-6 Sol/Luna, MiMo-V2.6-Pro/Flash (new Xiaomi provider), and Grok 4.7; fixes for Anthropic-protocol requests and Ctrl+C during tool runs; deepagents 0.7.18.</span><span data-l="zh"><strong>Opus 5.5、GPT-6 Sol/Luna 与小米 MiMo。</strong>新增模型：Claude Opus 5.5、GPT-6 Sol/Luna、MiMo-V2.6-Pro/Flash（新增小米 provider）与 Grok 4.7；修复 Anthropic 协议请求报错与工具运行中 Ctrl+C 的问题；deepagents 0.7.18。</span></div>
+        </div>
         <div class="cl-item">
           <div class="cl-head">
             <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.3.1" target="_blank" rel="noopener">v0.3.1</a>
@@ -1273,7 +1310,7 @@
         <h3><span data-l="en">Up and running<br>in <span>just seconds</span></span><span data-l="zh">几秒之内<br><span>即刻上手</span></span></h3>
         <p><span data-l="en">One wizard configures everything — LLM provider, API keys, model selection, and workspace mode. Supports OAuth sign-in for Claude Code and Codex CLI users.</span><span data-l="zh">一个向导即可配置好一切——LLM 提供商、API 密钥、模型选择与工作区模式。支持 Claude Code 与 Codex CLI 用户的 OAuth 登录。</span></p>
         <ul class="onboard-steps">
-          <li><span data-l="en">Install via <code style="font-family:var(--mono);color:var(--cyan);font-size:0.85em;">uv tool install EvoScientist</code></span><span data-l="zh">通过 <code style="font-family:var(--mono);color:var(--cyan);font-size:0.85em;">uv tool install EvoScientist</code> 安装</span></li>
+          <li><span data-l="en">Install with <a href="#hero" style="color:var(--cyan);">one command</a> on macOS, Linux or Windows</span><span data-l="zh">macOS、Linux、Windows 均可<a href="#hero" style="color:var(--cyan);">一行命令</a>安装</span></li>
           <li><span data-l="en">Run <code style="font-family:var(--mono);color:var(--cyan);font-size:0.85em;">EvoSci onboard</code> and follow the prompts</span><span data-l="zh">运行 <code style="font-family:var(--mono);color:var(--cyan);font-size:0.85em;">EvoSci onboard</code> 并按提示操作</span></li>
           <li><span data-l="en">Choose your LLM provider and enter your API key</span><span data-l="zh">选择你的 LLM 提供商并输入 API 密钥</span></li>
           <li><span data-l="en">Pick a model and workspace mode — done</span><span data-l="zh">选好模型与工作区模式——完成</span></li>
@@ -1476,7 +1513,7 @@ flowchart LR
           OpenAI
         </div>
         <div class="prov-models">
-          <span>gpt-6.1-sol</span><span>gpt-6-astra</span><span>gpt-5.3-codex</span>
+          <span>gpt-6.1-sol</span><span>gpt-6-astra</span><span>gpt-6-luna</span>
         </div>
       </div>
       <div class="prov rv rv-3">
@@ -1568,7 +1605,7 @@ flowchart LR
         </div>
         <div class="prov-tag"><span data-l="en">gateway</span><span data-l="zh">聚合网关</span></div>
         <div class="prov-models">
-          <span>claude-opus-5.5</span><span>grok-4.7</span><span>mimo-v2.6-pro</span>
+          <span>claude-opus-5.5</span><span>gemini-4-argon</span><span>grok-4.7</span>
         </div>
       </div>
       <div class="prov rv rv-3">
@@ -1578,7 +1615,7 @@ flowchart LR
         </div>
         <div class="prov-tag"><span data-l="en">gateway</span><span data-l="zh">聚合网关</span></div>
         <div class="prov-models">
-          <span>claude-opus-4.8</span><span>gemini-3.5-flash</span><span>grok-4.3</span>
+          <span>claude-opus-5.5</span><span>gemini-3.5-flash</span><span>grok-4.3</span>
         </div>
       </div>
       <div class="prov rv rv-2">
@@ -1588,7 +1625,7 @@ flowchart LR
         </div>
         <div class="prov-tag"><span data-l="en">gateway</span><span data-l="zh">聚合网关</span></div>
         <div class="prov-models">
-          <span>claude-opus-5</span><span>gpt-5.5</span><span>gemini-3.8-flash</span>
+          <span>claude-opus-5.5</span><span>gemini-3.8-flash</span><span>deepseek-v4-pro</span>
         </div>
       </div>
       <div class="prov rv rv-1">
@@ -1863,6 +1900,40 @@ flowchart LR
     setLang(document.documentElement.lang || 'en', false);
   })();
 
+  // ── Install command (OS tabs + copy) ──
+  (function(){
+    const box = document.querySelector('[data-install]');
+    if(!box) return;
+    const CMDS = {
+      mac:   { pr:'$',   cmd:'curl -fsSL https://evoscientist.ai/install.sh | bash' },
+      linux: { pr:'$',   cmd:'curl -fsSL https://evoscientist.ai/install.sh | bash' },
+      win:   { pr:'PS>', cmd:'irm https://evoscientist.ai/install.ps1 | iex' }
+    };
+    const tabs = box.querySelectorAll('.install-tabs button[data-os]');
+    const copyBtn = box.querySelector('.install');
+    const prEl = box.querySelector('[data-install-pr]');
+    const cmdEl = box.querySelector('[data-install-cmd]');
+    let current = 'mac';
+    function setOS(os){
+      if(!CMDS[os]) os = 'mac';
+      current = os;
+      prEl.textContent = CMDS[os].pr;
+      cmdEl.textContent = CMDS[os].cmd;
+      tabs.forEach(function(t){ t.setAttribute('aria-pressed', String(t.dataset.os===os)); });
+    }
+    const p = ((navigator.userAgentData && navigator.userAgentData.platform) || navigator.platform || '').toLowerCase();
+    setOS(p.indexOf('win') === 0 ? 'win' : (p.indexOf('linux') !== -1 || p.indexOf('cros') !== -1 || p === 'chrome os') ? 'linux' : 'mac');
+    tabs.forEach(function(t){ t.addEventListener('click', function(){ setOS(t.dataset.os); }); });
+    copyBtn.addEventListener('click', function(){
+      if(!navigator.clipboard) return;
+      navigator.clipboard.writeText(CMDS[current].cmd).then(function(){
+        copyBtn.classList.add('copied');
+        clearTimeout(copyBtn._t);
+        copyBtn._t = setTimeout(function(){ copyBtn.classList.remove('copied'); }, 1500);
+      }).catch(function(){});
+    });
+  })();
+
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const heroVideo = document.querySelector('.hero-video');
   if(reduceMotion && heroVideo){
@@ -2045,7 +2116,7 @@ flowchart LR
       [1800,'<span class="q">❯ Auth mode: </span><span class="ans">API Key</span>'],
       [2200,'<span class="q">❯ Anthropic API key: </span><span class="dim">Validating…</span>'],
       [2900,'<span class="q">❯ Anthropic API key: </span><span class="dim">Validating… </span><span class="success">✓ Valid</span>'],
-      [3300,'<span class="q">❯ Model: </span><span class="ans">claude-opus-5</span>'],
+      [3300,'<span class="q">❯ Model: </span><span class="ans">claude-sonnet-5-5</span>'],
       [3700,'<span class="q">❯ Tavily search key: </span><span class="dim">Validating… </span><span class="success">✓ Valid</span>'],
       [4100,'<span class="q">❯ Workspace mode: </span><span class="ans">Daemon (persistent)</span>'],
       [4500,'<span class="q">❯ Channels: </span><span class="ans">iMessage  </span><span class="success">✓ imsg found</span>'],
