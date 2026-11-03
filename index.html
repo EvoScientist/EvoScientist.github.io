@@ -237,6 +237,7 @@
     }
     .btn-s:hover { border-color:var(--cyan-50); box-shadow:0 0 30px var(--cyan-06); transform:translateY(-1px); }
     .btn-s svg { width:16px; height:16px; stroke:currentColor; fill:none; }
+    .btn-s svg[fill="currentColor"] { fill:currentColor; stroke:none; }
     .install-box { width:min(100%,520px); }
     .install-label { font-family:var(--mono); font-size:0.68rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--text-3); margin-bottom:0.55rem; }
     .install-card {
@@ -1357,9 +1358,9 @@
   <div class="container">
     <div class="s-label rv"><span data-l="en">See It In Action</span><span data-l="zh">实机演示</span></div>
     <h2 class="s-title rv rv-1"><span data-l="en">Demo</span><span data-l="zh">演示</span></h2>
-    <p class="s-sub rv rv-2"><span data-l="en">The same EvoScientist agent — driven from a desktop WebUI, the terminal, or your phone — plus its self-evolving EvoMemory graph.</span><span data-l="zh">同一个 EvoScientist 智能体——通过桌面 WebUI、终端或手机驱动——外加它自进化的 EvoMemory 图谱。</span></p>
+    <p class="s-sub rv rv-2"><span data-l="en">The same EvoScientist agent — driven from the WebUI, the terminal, or your phone — plus its self-evolving EvoMemory graph.</span><span data-l="zh">同一个 EvoScientist 智能体——通过 WebUI、终端或手机驱动——外加它自进化的 EvoMemory 图谱。</span></p>
     <div class="surface-frame rv rv-3" style="margin-top:3.5rem;">
-      <span class="surface-cap"><span data-l="en">Desktop WebUI</span><span data-l="zh">桌面 WebUI</span></span>
+      <span class="surface-cap">WebUI</span>
       <video class="surface-vid" src="assets/webui.mp4" poster="assets/webui.jpg" loop muted playsinline preload="none"></video>
     </div>
     <div class="surfaces-row rv rv-4">
