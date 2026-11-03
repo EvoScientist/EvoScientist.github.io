@@ -273,6 +273,12 @@
     .install-note code { font-family:var(--mono); font-size:0.95em; color:var(--text-1); }
     .install-note a { color:var(--text-1); border-bottom:1px solid var(--cyan-20); transition:0.2s; }
     .install-note a:hover { color:var(--cyan); border-color:var(--cyan); }
+    .desktop-box { width:min(100%,520px); margin-bottom:1.1rem; }
+    .dl-row { display:flex; flex-wrap:wrap; gap:0.6rem; }
+    .dl-row .btn-s { padding:0.6rem 1.1rem; font-size:0.84rem; }
+    .dl-row .ic-fill { width:15px; height:15px; fill:currentColor; stroke:none; flex-shrink:0; }
+    .dl-row .btn-soon { opacity:0.5; cursor:default; }
+    .dl-row .btn-soon:hover { border-color:var(--cyan-20); box-shadow:none; transform:none; }
     .scroll-h {
       position:absolute; bottom:2rem; left:50%; transform:translateX(-50%);
       color:var(--text-3); animation:sh 2s ease-in-out infinite;
@@ -733,7 +739,7 @@
       .hero-copy .hero-cta { display:grid; grid-template-columns:1fr 1fr; align-items:stretch; }
       .hero-copy .hero-cta a { justify-content:center; width:100%; }
       .hero-copy .hero-cta .btn-p { grid-column:1/-1; }
-      .install-box { width:100%; }
+      .install-box, .desktop-box { width:100%; }
       .hero-float { display:none; }
       .hero-proof { grid-template-columns:repeat(2,1fr); margin-top:2.8rem; }
       .hero-proof-item:nth-child(2) { border-right:0; }
@@ -866,6 +872,14 @@
         </a>
         <a href="#onboard" class="btn-s"><span data-l="en">Quick Start</span><span data-l="zh">快速开始</span></a>
       </div>
+      <div class="desktop-box rv rv-5">
+        <div class="install-label"><span data-l="en">Desktop app</span><span data-l="zh">桌面应用</span></div>
+        <div class="dl-row">
+          <a class="btn-s" href="https://github.com/EvoScientist/EvoScientist-WebUI/releases/latest/download/EvoScientist-Setup.exe"><svg class="ic-fill" viewBox="0 0 22 22" aria-hidden="true"><path d="M0 0h10v10H0zm12 0h10v10H12zM0 12h10v10H0zm12 0h10v10H12z"/></svg><span data-l="en">Download for Windows</span><span data-l="zh">下载 Windows 版</span></a>
+          <span class="btn-s btn-soon"><svg class="ic-fill" viewBox="0 0 16 21" aria-hidden="true"><path d="M8.6 4.6c.9-1.1 1.5-2.6 1.3-4.1-1.3.1-2.8.9-3.7 2-.8.9-1.5 2.4-1.3 3.9 1.4.1 2.8-.7 3.7-1.8z"/><path d="M12.9 11.1c0-2.4 2-3.6 2.1-3.6-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.8C2.9 5.7 1.4 6.7.6 8.2c-1.7 2.9-.4 7.3 1.2 9.7.8 1.2 1.8 2.5 3 2.4 1.2-.1 1.7-.8 3.1-.8 1.5 0 1.9.8 3.2.8 1.3 0 2.1-1.2 2.9-2.4.9-1.3 1.3-2.6 1.3-2.7 0 0-2.5-1-2.4-4.1z"/></svg><span data-l="en">macOS · Coming soon</span><span data-l="zh">macOS · 即将推出</span></span>
+        </div>
+        <p class="install-note"><span data-l="en">The installer is not signed yet: Windows SmartScreen may ask you to confirm (<strong>More info</strong> → <strong>Run anyway</strong>).</span><span data-l="zh">安装包暂未签名：Windows SmartScreen 可能会要求确认（点「更多信息」→「仍要运行」）。</span></p>
+      </div>
       <div class="install-box rv rv-5" data-install>
         <div class="install-label"><span data-l="en">Install via terminal</span><span data-l="zh">通过终端安装</span></div>
         <div class="install-card">
@@ -920,46 +934,51 @@
     <h2 class="s-title rv rv-1"><span data-l="en">News &amp; Updates</span><span data-l="zh">新闻与更新</span></h2>
     <div class="news-list">
       <div class="news-item rv rv-1">
+        <span class="news-date">03 Nov 2026</span>
+        <span class="news-emoji">🖥️</span>
+        <span class="news-text"><span data-l="en">The <strong>EvoScientist desktop app</strong> is out for Windows! <a href="https://github.com/EvoScientist/EvoScientist-WebUI/releases/latest/download/EvoScientist-Setup.exe"><strong>Download</strong></a> 👈</span><span data-l="zh"><strong>EvoScientist 桌面应用</strong> Windows 版发布！<a href="https://github.com/EvoScientist/EvoScientist-WebUI/releases/latest/download/EvoScientist-Setup.exe"><strong>下载</strong></a> 👈</span></span>
+      </div>
+      <div class="news-item rv rv-2">
         <span class="news-date">03 Jun 2026</span>
         <span class="news-emoji">🥈</span>
         <span class="news-text"><span data-l="en">Ranked #2 overall — and 🥇 #1 among <strong>GPT-5.4</strong>-based agents — on <a href="https://github.com/InternScience/ResearchClawBench" target="_blank" rel="noopener"><strong>ResearchClawBench</strong></a> (Agent Mode)! <a href="https://internscience.github.io/ResearchClawBench-Home/" target="_blank" rel="noopener"><strong>Leaderboard</strong></a> 👈</span><span data-l="zh">总榜排名第 2 —— 在基于 <strong>GPT-5.4</strong> 的智能体中夺得 🥇 第 1 —— 登上 <a href="https://github.com/InternScience/ResearchClawBench" target="_blank" rel="noopener"><strong>ResearchClawBench</strong></a>（智能体模式）！<a href="https://internscience.github.io/ResearchClawBench-Home/" target="_blank" rel="noopener"><strong>排行榜</strong></a> 👈</span></span>
       </div>
-      <div class="news-item rv rv-2">
+      <div class="news-item rv rv-3">
         <span class="news-date">18 Apr 2026</span>
         <span class="news-emoji">🥇</span>
         <span class="news-text"><span data-l="en">Ranked #1 on <a href="https://deepresearch-bench.github.io/" target="_blank" rel="noopener"><strong>DeepResearch Bench</strong></a> at submission time! <a href="https://huggingface.co/spaces/muset-ai/DeepResearch-Bench-Leaderboard" target="_blank" rel="noopener"><strong>Leaderboard</strong></a> 👈</span><span data-l="zh">在 <a href="https://deepresearch-bench.github.io/" target="_blank" rel="noopener"><strong>DeepResearch Bench</strong></a> 上提交时排名第 1！<a href="https://huggingface.co/spaces/muset-ai/DeepResearch-Bench-Leaderboard" target="_blank" rel="noopener"><strong>排行榜</strong></a> 👈</span></span>
       </div>
-      <div class="news-item rv rv-3">
+      <div class="news-item rv rv-4">
         <span class="news-date">13 Apr 2026</span>
         <span class="news-emoji">🥇</span>
         <span class="news-text"><span data-l="en">Reclaimed #1 on <a href="https://agentresearchlab.com/benchmarks/deepresearch-bench-ii/index.html#leaderboard" target="_blank" rel="noopener"><strong>DeepResearch Bench II</strong></a> at submission time! <a href="https://agentresearchlab.com/benchmarks/deepresearch-bench-ii/index.html#leaderboard" target="_blank" rel="noopener"><strong>Leaderboard</strong></a> 👈</span><span data-l="zh">在 <a href="https://agentresearchlab.com/benchmarks/deepresearch-bench-ii/index.html#leaderboard" target="_blank" rel="noopener"><strong>DeepResearch Bench II</strong></a> 上重夺提交时排名第 1！<a href="https://agentresearchlab.com/benchmarks/deepresearch-bench-ii/index.html#leaderboard" target="_blank" rel="noopener"><strong>排行榜</strong></a> 👈</span></span>
       </div>
-      <div class="news-item rv rv-4">
+      <div class="news-item rv rv-5">
         <span class="news-date">26 Mar 2026</span>
         <span class="news-emoji">🥇</span>
         <span class="news-text"><span data-l="en">Ranked #1 on <a href="https://allenai-asta-bench-leaderboard.hf.space/data-analysis" target="_blank" rel="noopener"><strong>AstaBench Data Analysis</strong></a> at submission time! <a href="https://allenai-asta-bench-leaderboard.hf.space/data-analysis" target="_blank" rel="noopener"><strong>Leaderboard</strong></a> 👈</span><span data-l="zh">在 <a href="https://allenai-asta-bench-leaderboard.hf.space/data-analysis" target="_blank" rel="noopener"><strong>AstaBench Data Analysis</strong></a> 上提交时排名第 1！<a href="https://allenai-asta-bench-leaderboard.hf.space/data-analysis" target="_blank" rel="noopener"><strong>排行榜</strong></a> 👈</span></span>
       </div>
-      <div class="news-item rv rv-5">
+      <div class="news-item rv rv-6">
         <span class="news-date">25 Mar 2026</span>
         <span class="news-emoji">🥇</span>
         <span class="news-text"><span data-l="en">Ranked #1 on <a href="https://allenai-asta-bench-leaderboard.hf.space/code-execution" target="_blank" rel="noopener"><strong>AstaBench Code &amp; Execution</strong></a> at submission time! <a href="https://allenai-asta-bench-leaderboard.hf.space/code-execution" target="_blank" rel="noopener"><strong>Leaderboard</strong></a> 👈</span><span data-l="zh">在 <a href="https://allenai-asta-bench-leaderboard.hf.space/code-execution" target="_blank" rel="noopener"><strong>AstaBench Code &amp; Execution</strong></a> 上提交时排名第 1！<a href="https://allenai-asta-bench-leaderboard.hf.space/code-execution" target="_blank" rel="noopener"><strong>排行榜</strong></a> 👈</span></span>
       </div>
-      <div class="news-item rv rv-6">
+      <div class="news-item rv rv-7">
         <span class="news-date">13 Mar 2026</span>
         <span class="news-emoji">🚀</span>
         <span class="news-text"><span data-l="en"><a href="https://github.com/EvoScientist/EvoScientist" target="_blank" rel="noopener"><strong>EvoScientist</strong></a> officially debuts!</span><span data-l="zh"><a href="https://github.com/EvoScientist/EvoScientist" target="_blank" rel="noopener"><strong>EvoScientist</strong></a> 正式发布！</span></span>
       </div>
-      <div class="news-item rv rv-7">
+      <div class="news-item rv rv-8">
         <span class="news-date">11 Mar 2026</span>
         <span class="news-emoji">⛳</span>
         <span class="news-text"><span data-l="en">Related Report is live! <a href="https://arxiv.org/abs/2603.08127" target="_blank" rel="noopener"><strong>Check it out</strong></a> 👈</span><span data-l="zh">相关报告已发布！<a href="https://arxiv.org/abs/2603.08127" target="_blank" rel="noopener"><strong>点击查看</strong></a> 👈</span></span>
       </div>
-      <div class="news-item rv rv-8">
+      <div class="news-item rv rv-9">
         <span class="news-date">06 Mar 2026</span>
         <span class="news-emoji">🥇</span>
         <span class="news-text"><span data-l="en">Ranked #1 on <a href="https://agentresearchlab.com/benchmarks/deepresearch-bench-ii/index.html#leaderboard" target="_blank" rel="noopener"><strong>DeepResearch Bench II</strong></a> at submission time! <a href="https://agentresearchlab.com/benchmarks/deepresearch-bench-ii/index.html#leaderboard" target="_blank" rel="noopener"><strong>Leaderboard</strong></a> 👈</span><span data-l="zh">在 <a href="https://agentresearchlab.com/benchmarks/deepresearch-bench-ii/index.html#leaderboard" target="_blank" rel="noopener"><strong>DeepResearch Bench II</strong></a> 上提交时排名第 1！<a href="https://agentresearchlab.com/benchmarks/deepresearch-bench-ii/index.html#leaderboard" target="_blank" rel="noopener"><strong>排行榜</strong></a> 👈</span></span>
       </div>
-      <div class="news-item rv rv-9">
+      <div class="news-item rv rv-10">
         <span class="news-date">24 Nov 2025</span>
         <span class="news-emoji">🏆</span>
         <span class="news-text"><span data-l="en">6/6 accepted at <a href="https://icais.ai/" target="_blank" rel="noopener"><strong>ICAIS 2025</strong></a> AI Scientist Track — Best Paper &amp; AI Reviewer's Appraisal Award! <a href="https://airaxiv.com/papers/?q=zacharyzhang2022%40gmail.com" target="_blank" rel="noopener"><strong>Details</strong></a> 👈</span><span data-l="zh">在 <a href="https://icais.ai/" target="_blank" rel="noopener"><strong>ICAIS 2025</strong></a> AI Scientist Track 上 6 篇论文全部被接收（6/6）—— 荣获最佳论文奖及 AI 审稿人评价奖！<a href="https://airaxiv.com/papers/?q=zacharyzhang2022%40gmail.com" target="_blank" rel="noopener"><strong>详情</strong></a> 👈</span></span>
