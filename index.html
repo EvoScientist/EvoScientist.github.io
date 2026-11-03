@@ -846,7 +846,7 @@
       <div class="badges rv rv-3">
         <span class="badge c">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-          v0.4.0
+          v0.4.1
         </span>
         <span class="badge g">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
@@ -977,6 +977,13 @@
     <div class="cl-timeline rv rv-2">
       <div class="cl-item latest">
         <div class="cl-head">
+          <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.4.1" target="_blank" rel="noopener">v0.4.1</a>
+          <span class="cl-date">03 Nov 2026</span>
+        </div>
+        <div class="cl-text"><span data-l="en"><strong>One server for the WebUI &amp; desktop app.</strong> The WebUI and the desktop app share the one background server from any project (WebUI 0.5); on Windows a run cut by a server stop runs again at the next start; cancelling a run on the server stops its shell command; clearer tool errors; fixes for resumed scheduled tasks, background-process checks and <code>EvoSci deploy --tunnel</code>; compatibility code for data older than v0.3.8 removed.</span><span data-l="zh"><strong>WebUI 与桌面应用共用一个后台服务器。</strong>WebUI 与桌面应用可在任意项目中共用同一个后台服务器（WebUI 0.5）；Windows 上被服务器停止打断的运行会在下次启动时重新运行；在服务器上取消运行会停止它启动的 shell 命令；工具报错更清晰；修复恢复定时任务、后台进程查询和 <code>EvoSci deploy --tunnel</code> 的问题；移除 v0.3.8 之前数据的兼容代码。</span></div>
+      </div>
+      <div class="cl-item">
+        <div class="cl-head">
           <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.4.0" target="_blank" rel="noopener">v0.4.0</a>
           <span class="cl-date">31 Oct 2026</span>
         </div>
@@ -1003,14 +1010,14 @@
         </div>
         <div class="cl-text"><span data-l="en"><strong>Skills apply instantly, Opper &amp; project-scoped sessions.</strong> New model: Claude Haiku 5.5 (OpenRouter); new provider: Opper; installed skills apply from the next message without <code>/new</code>, and <code>/skill-name</code> pins a skill to a message; the WebUI installs locally and starts offline; on Windows the agent's commands run in Git Bash set up by <code>EvoSci setup</code>; sessions, memory and scheduled tasks are scoped to their project, and <code>/threads</code> shows each thread's workspace; a slow MCP server no longer stalls the server start; deepagents 0.7.23.</span><span data-l="zh"><strong>Skill 即装即用、Opper 与按项目隔离的会话。</strong>新增模型：Claude Haiku 5.5（OpenRouter）；新增 Opper 提供商；安装的 skill 从下一条消息起生效，无需 <code>/new</code>，<code>/skill-name</code> 可在消息中点名使用某个 skill；WebUI 改为本地安装，可离线启动；Windows 下 agent 的命令改在 <code>EvoSci setup</code> 配置的 Git Bash 中运行；会话、记忆与定时任务按项目隔离，<code>/threads</code> 显示每个会话所属的工作区；响应慢的 MCP 服务不再拖住服务启动；deepagents 0.7.23。</span></div>
       </div>
-      <div class="cl-item">
-        <div class="cl-head">
-          <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.3.5" target="_blank" rel="noopener">v0.3.5</a>
-          <span class="cl-date">03 Oct 2026</span>
-        </div>
-        <div class="cl-text"><span data-l="en"><strong>GPT-6.1 Sol &amp; <code>EvoSci setup</code>.</strong> New model: GPT-6.1 Sol (OpenAI + OpenRouter); a new <code>EvoSci setup</code> command as groundwork for installer distribution; profile memory over its budget truncates only the oversized file instead of dropping all of it; the observation index lists the newest observations first; deepagents 0.7.21.</span><span data-l="zh"><strong>GPT-6.1 Sol 与 <code>EvoSci setup</code>。</strong>新增模型：GPT-6.1 Sol（OpenAI 与 OpenRouter）；新增 <code>EvoSci setup</code> 命令，为安装分发做准备；优化 profile 记忆注入，超出预算时只截断超出的文件，不再整体丢弃；优化 observation 索引，最新的条目优先；deepagents 0.7.21。</span></div>
-      </div>
       <div id="cl-rest">
+        <div class="cl-item">
+          <div class="cl-head">
+            <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.3.5" target="_blank" rel="noopener">v0.3.5</a>
+            <span class="cl-date">03 Oct 2026</span>
+          </div>
+          <div class="cl-text"><span data-l="en"><strong>GPT-6.1 Sol &amp; <code>EvoSci setup</code>.</strong> New model: GPT-6.1 Sol (OpenAI + OpenRouter); a new <code>EvoSci setup</code> command as groundwork for installer distribution; profile memory over its budget truncates only the oversized file instead of dropping all of it; the observation index lists the newest observations first; deepagents 0.7.21.</span><span data-l="zh"><strong>GPT-6.1 Sol 与 <code>EvoSci setup</code>。</strong>新增模型：GPT-6.1 Sol（OpenAI 与 OpenRouter）；新增 <code>EvoSci setup</code> 命令，为安装分发做准备；优化 profile 记忆注入，超出预算时只截断超出的文件，不再整体丢弃；优化 observation 索引，最新的条目优先；deepagents 0.7.21。</span></div>
+        </div>
         <div class="cl-item">
           <div class="cl-head">
             <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.3.4" target="_blank" rel="noopener">v0.3.4</a>
@@ -1259,7 +1266,7 @@
       </div>
     </div>
     <button class="cl-toggle rv" id="cl-toggle" type="button" aria-expanded="false" onclick="var r=document.getElementById('cl-rest'),o=r.classList.toggle('open');this.classList.toggle('open',o);this.setAttribute('aria-expanded',o);">
-      <span class="cl-toggle-label"><span class="cl-lmore"><span data-l="en">Show 25 earlier releases</span><span data-l="zh">展开 25 条更早的发布</span></span><span class="cl-lless"><span data-l="en">Show fewer releases</span><span data-l="zh">收起</span></span></span>
+      <span class="cl-toggle-label"><span class="cl-lmore"><span data-l="en">Show 36 earlier releases</span><span data-l="zh">展开 36 条更早的发布</span></span><span class="cl-lless"><span data-l="en">Show fewer releases</span><span data-l="zh">收起</span></span></span>
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
     </button>
   </div>
