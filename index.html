@@ -853,7 +853,7 @@
       <div class="badges rv rv-3">
         <span class="badge c">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-          v0.4.2
+          v0.4.3
         </span>
         <span class="badge g">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
@@ -997,6 +997,13 @@
     <div class="cl-timeline rv rv-2">
       <div class="cl-item latest">
         <div class="cl-head">
+          <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.4.3" target="_blank" rel="noopener">v0.4.3</a>
+          <span class="cl-date">14 Nov 2026</span>
+        </div>
+        <div class="cl-text"><span data-l="en"><strong>Claude Fable 5.2, Gemini 4 &amp; <code>EvoSci workspace move</code>.</strong> New models: Claude Fable 5.2 (Anthropic + OpenRouter), Gemini 4 Carbon and Gemini 4 Hydrogen (Google + OpenRouter); <code>EvoSci workspace move</code> for moved or renamed projects; the background server runs the ccproxy behind Claude Pro/Max sign-in, and <code>EvoSci server</code> replaces <code>EvoSci service</code> and <code>EvoSci ccproxy</code>; media files the agent writes or reads are sent to the chat; deepagents 0.7.38.</span><span data-l="zh"><strong>Claude Fable 5.2、Gemini 4 与 <code>EvoSci workspace move</code>。</strong>新增模型：Claude Fable 5.2（Anthropic 与 OpenRouter）、Gemini 4 Carbon 与 Gemini 4 Hydrogen（Google 与 OpenRouter）；<code>EvoSci workspace move</code> 迁移移动或改名后的项目；Claude Pro/Max 登录所用的 ccproxy 改由后台服务器运行，<code>EvoSci server</code> 取代 <code>EvoSci service</code> 与 <code>EvoSci ccproxy</code>；智能体写出或读取的媒体文件会发到聊天中；deepagents 0.7.38。</span></div>
+      </div>
+      <div class="cl-item">
+        <div class="cl-head">
           <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.4.2" target="_blank" rel="noopener">v0.4.2</a>
           <span class="cl-date">06 Nov 2026</span>
         </div>
@@ -1023,14 +1030,14 @@
         </div>
         <div class="cl-text"><span data-l="en"><strong>Desktop groundwork, Kimi K3.1 Pro &amp; MiniMax M3.1 Flash.</strong> Desktop groundwork: <code>EvoSci deploy --json</code> and a settings API for the WebUI; new models: Kimi K3.1 Pro (Moonshot + OpenRouter) and MiniMax M3.1 Flash (MiniMax + OpenRouter), with the Kimi and MiniMax lists trimmed to K3.1 Pro / K3 and M3.1 Flash / M3; routed providers use only their own API key; bounded memory worker writes; tool selection keeps the built-in tools; fixes for scheduled tasks after restarts, Windows output, hangs at exit, standalone channels and unresponsive MCP servers; deepagents 0.7.32.</span><span data-l="zh"><strong>桌面应用铺垫、Kimi K3.1 Pro 与 MiniMax M3.1 Flash。</strong>桌面应用铺垫：<code>EvoSci deploy --json</code> 与供 WebUI 使用的设置 API；新增模型：Kimi K3.1 Pro（Moonshot 与 OpenRouter）、MiniMax M3.1 Flash（MiniMax 与 OpenRouter），Kimi 与 MiniMax 列表分别精简为 K3.1 Pro / K3 与 M3.1 Flash / M3；路由类提供商只使用各自的 API key；memory worker 写入有上限；工具筛选始终保留内置工具；修复重启后定时任务失效、Windows 输出、退出卡住、独立渠道退出和 MCP 服务器无响应等问题；deepagents 0.7.32。</span></div>
       </div>
-      <div class="cl-item">
-        <div class="cl-head">
-          <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.3.7" target="_blank" rel="noopener">v0.3.7</a>
-          <span class="cl-date">17 Oct 2026</span>
-        </div>
-        <div class="cl-text"><span data-l="en"><strong>One-line install, goals &amp; proactive follow-ups.</strong> One-line install for macOS, Windows and Linux, and <code>EvoSci update</code> to move an install between releases; acceptance criteria and goals: <code>--rubric</code>, <code>/rubric</code> and <code>/goal</code> grade work against criteria you set; proactivity: <code>EvoSci serve</code> follows up in channel chats on its own (<code>/proactive</code>); sign in with ChatGPT directly; the backend answers browser requests only from trusted pages; transient model failures retry within a wait budget; new models: Claude Haiku 5.5 (Anthropic), Gemini 4 Argon, Muse Wonder and Muse Spark Open (OpenRouter), with the Claude lists trimmed to the four current models and Claude Sonnet 5.5 as the default; Windows channel attachments and <code>@file</code> mentions open in the file tools; deepagents 0.7.28.</span><span data-l="zh"><strong>一行命令安装、目标与主动跟进。</strong>macOS、Windows、Linux 一行命令安装，<code>EvoSci update</code> 可在版本之间切换；验收标准与目标：<code>--rubric</code>、<code>/rubric</code>、<code>/goal</code> 按你设定的标准检查工作结果；主动性：<code>EvoSci serve</code> 会在频道对话里主动跟进（<code>/proactive</code>）；可直接用 ChatGPT 账号登录；后端只响应可信页面的浏览器请求；模型调用遇到临时故障会在等待时限内重试；新增模型：Claude Haiku 5.5（Anthropic）、Gemini 4 Argon、Muse Wonder、Muse Spark Open（OpenRouter），Claude 列表精简为当前的四个模型，默认模型改为 Claude Sonnet 5.5；Windows 下频道附件和 <code>@file</code> 提及的文件可直接用文件工具打开；deepagents 0.7.28。</span></div>
-      </div>
       <div id="cl-rest">
+        <div class="cl-item">
+          <div class="cl-head">
+            <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.3.7" target="_blank" rel="noopener">v0.3.7</a>
+            <span class="cl-date">17 Oct 2026</span>
+          </div>
+          <div class="cl-text"><span data-l="en"><strong>One-line install, goals &amp; proactive follow-ups.</strong> One-line install for macOS, Windows and Linux, and <code>EvoSci update</code> to move an install between releases; acceptance criteria and goals: <code>--rubric</code>, <code>/rubric</code> and <code>/goal</code> grade work against criteria you set; proactivity: <code>EvoSci serve</code> follows up in channel chats on its own (<code>/proactive</code>); sign in with ChatGPT directly; the backend answers browser requests only from trusted pages; transient model failures retry within a wait budget; new models: Claude Haiku 5.5 (Anthropic), Gemini 4 Argon, Muse Wonder and Muse Spark Open (OpenRouter), with the Claude lists trimmed to the four current models and Claude Sonnet 5.5 as the default; Windows channel attachments and <code>@file</code> mentions open in the file tools; deepagents 0.7.28.</span><span data-l="zh"><strong>一行命令安装、目标与主动跟进。</strong>macOS、Windows、Linux 一行命令安装，<code>EvoSci update</code> 可在版本之间切换；验收标准与目标：<code>--rubric</code>、<code>/rubric</code>、<code>/goal</code> 按你设定的标准检查工作结果；主动性：<code>EvoSci serve</code> 会在频道对话里主动跟进（<code>/proactive</code>）；可直接用 ChatGPT 账号登录；后端只响应可信页面的浏览器请求；模型调用遇到临时故障会在等待时限内重试；新增模型：Claude Haiku 5.5（Anthropic）、Gemini 4 Argon、Muse Wonder、Muse Spark Open（OpenRouter），Claude 列表精简为当前的四个模型，默认模型改为 Claude Sonnet 5.5；Windows 下频道附件和 <code>@file</code> 提及的文件可直接用文件工具打开；deepagents 0.7.28。</span></div>
+        </div>
         <div class="cl-item">
           <div class="cl-head">
             <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.3.6" target="_blank" rel="noopener">v0.3.6</a>
@@ -1552,7 +1559,7 @@ flowchart LR
           Anthropic
         </div>
         <div class="prov-models">
-          <span>claude-opus-5-5</span><span>claude-fable-5-1</span><span>claude-sonnet-5-5</span>
+          <span>claude-opus-5-5</span><span>claude-fable-5-2</span><span>claude-sonnet-5-5</span>
         </div>
       </div>
       <div class="prov rv rv-2">
@@ -1570,7 +1577,7 @@ flowchart LR
           Google
         </div>
         <div class="prov-models">
-          <span>gemini-3.8-flash</span><span>gemini-3.5-flash</span><span>gemini-3.1-pro</span>
+          <span>gemini-4-hydrogen</span><span>gemini-4-carbon</span><span>gemini-3.8-flash</span>
         </div>
       </div>
       <div class="prov rv rv-1">
