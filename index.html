@@ -853,7 +853,7 @@
       <div class="badges rv rv-3">
         <span class="badge c">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-          v0.4.3
+          v0.4.4
         </span>
         <span class="badge g">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
@@ -1002,6 +1002,13 @@
     <div class="cl-timeline rv rv-2">
       <div class="cl-item latest">
         <div class="cl-head">
+          <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.4.4" target="_blank" rel="noopener">v0.4.4</a>
+          <span class="cl-date">20 Nov 2026</span>
+        </div>
+        <div class="cl-text"><span data-l="en"><strong>GPT-6.2 Sol/Astra &amp; <code>EvoSci login chatgpt</code>.</strong> New models: GPT-6.2 Sol and Astra (OpenAI + OpenRouter), Gemini 4 Neon, HY4 Flash and Qwen 4 Max (OpenRouter); <code>EvoSci login chatgpt</code> signs in with a ChatGPT plan outside onboarding; custom OpenAI-compatible endpoints list the models they serve; a stricter shell sandbox; deepagents 0.7.41.</span><span data-l="zh"><strong>GPT-6.2 Sol/Astra 与 <code>EvoSci login chatgpt</code>。</strong>新增模型：GPT-6.2 Sol 与 Astra（OpenAI 与 OpenRouter）、Gemini 4 Neon、HY4 Flash 与 Qwen 4 Max（OpenRouter）；<code>EvoSci login chatgpt</code> 可在配置向导之外登录 ChatGPT 订阅；自定义 OpenAI 兼容端点会列出它提供的模型；shell 沙箱更严格；deepagents 0.7.41。</span></div>
+      </div>
+      <div class="cl-item">
+        <div class="cl-head">
           <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.4.3" target="_blank" rel="noopener">v0.4.3</a>
           <span class="cl-date">14 Nov 2026</span>
         </div>
@@ -1028,14 +1035,14 @@
         </div>
         <div class="cl-text"><span data-l="en"><strong>One background service &amp; GPT-6.1 Terra.</strong> One background service for every project (stop it with <code>EvoSci server stop</code>); new model: GPT-6.1 Terra (OpenAI + OpenRouter); a project <code>.env</code> now holds only <code>EvoSci</code> command settings; hardened setup, a stricter shell sandbox and a safer <code>EvoSci update</code>; Apple silicon only on macOS; fixes for memory workers, serve turns and standalone channels.</span><span data-l="zh"><strong>统一后台服务与 GPT-6.1 Terra。</strong>所有项目共用一个后台服务（用 <code>EvoSci server stop</code> 停止）；新增模型：GPT-6.1 Terra（OpenAI 与 OpenRouter）；项目 <code>.env</code> 只保存 <code>EvoSci</code> 命令自身的设置；安装更稳健、shell 沙箱更严格、<code>EvoSci update</code> 更安全；macOS 只支持 Apple 芯片；修复 memory worker、serve 后续轮次和独立渠道等问题。</span></div>
       </div>
-      <div class="cl-item">
-        <div class="cl-head">
-          <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.3.8" target="_blank" rel="noopener">v0.3.8</a>
-          <span class="cl-date">24 Oct 2026</span>
-        </div>
-        <div class="cl-text"><span data-l="en"><strong>Desktop groundwork, Kimi K3.1 Pro &amp; MiniMax M3.1 Flash.</strong> Desktop groundwork: <code>EvoSci deploy --json</code> and a settings API for the WebUI; new models: Kimi K3.1 Pro (Moonshot + OpenRouter) and MiniMax M3.1 Flash (MiniMax + OpenRouter), with the Kimi and MiniMax lists trimmed to K3.1 Pro / K3 and M3.1 Flash / M3; routed providers use only their own API key; bounded memory worker writes; tool selection keeps the built-in tools; fixes for scheduled tasks after restarts, Windows output, hangs at exit, standalone channels and unresponsive MCP servers; deepagents 0.7.32.</span><span data-l="zh"><strong>桌面应用铺垫、Kimi K3.1 Pro 与 MiniMax M3.1 Flash。</strong>桌面应用铺垫：<code>EvoSci deploy --json</code> 与供 WebUI 使用的设置 API；新增模型：Kimi K3.1 Pro（Moonshot 与 OpenRouter）、MiniMax M3.1 Flash（MiniMax 与 OpenRouter），Kimi 与 MiniMax 列表分别精简为 K3.1 Pro / K3 与 M3.1 Flash / M3；路由类提供商只使用各自的 API key；memory worker 写入有上限；工具筛选始终保留内置工具；修复重启后定时任务失效、Windows 输出、退出卡住、独立渠道退出和 MCP 服务器无响应等问题；deepagents 0.7.32。</span></div>
-      </div>
       <div id="cl-rest">
+        <div class="cl-item">
+          <div class="cl-head">
+            <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.3.8" target="_blank" rel="noopener">v0.3.8</a>
+            <span class="cl-date">24 Oct 2026</span>
+          </div>
+          <div class="cl-text"><span data-l="en"><strong>Desktop groundwork, Kimi K3.1 Pro &amp; MiniMax M3.1 Flash.</strong> Desktop groundwork: <code>EvoSci deploy --json</code> and a settings API for the WebUI; new models: Kimi K3.1 Pro (Moonshot + OpenRouter) and MiniMax M3.1 Flash (MiniMax + OpenRouter), with the Kimi and MiniMax lists trimmed to K3.1 Pro / K3 and M3.1 Flash / M3; routed providers use only their own API key; bounded memory worker writes; tool selection keeps the built-in tools; fixes for scheduled tasks after restarts, Windows output, hangs at exit, standalone channels and unresponsive MCP servers; deepagents 0.7.32.</span><span data-l="zh"><strong>桌面应用铺垫、Kimi K3.1 Pro 与 MiniMax M3.1 Flash。</strong>桌面应用铺垫：<code>EvoSci deploy --json</code> 与供 WebUI 使用的设置 API；新增模型：Kimi K3.1 Pro（Moonshot 与 OpenRouter）、MiniMax M3.1 Flash（MiniMax 与 OpenRouter），Kimi 与 MiniMax 列表分别精简为 K3.1 Pro / K3 与 M3.1 Flash / M3；路由类提供商只使用各自的 API key；memory worker 写入有上限；工具筛选始终保留内置工具；修复重启后定时任务失效、Windows 输出、退出卡住、独立渠道退出和 MCP 服务器无响应等问题；deepagents 0.7.32。</span></div>
+        </div>
         <div class="cl-item">
           <div class="cl-head">
             <a class="cl-ver" href="https://github.com/EvoScientist/EvoScientist/releases/tag/v0.3.7" target="_blank" rel="noopener">v0.3.7</a>
@@ -1573,7 +1580,7 @@ flowchart LR
           OpenAI
         </div>
         <div class="prov-models">
-          <span>gpt-6.1-sol</span><span>gpt-6.1-terra</span><span>gpt-6-astra</span>
+          <span>gpt-6.2-sol</span><span>gpt-6.2-astra</span><span>gpt-6.1-terra</span>
         </div>
       </div>
       <div class="prov rv rv-3">
